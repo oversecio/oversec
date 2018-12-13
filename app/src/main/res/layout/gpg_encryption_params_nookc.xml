@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+                xmlns:gotit="http://schemas.android.com/apk/res-auto"
+                android:id="@+id/content_no_okc"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+        android:id="@+id/gpgParamsGotIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        gotit:gotit_id="@string/tooltipid_encryptionparams_gpg_general"
+        gotit:help_alias="encparams_pgp"
+        gotit:msg="@string/tooltip_encryptionparams_gpg_general"
+        gotit:arrowPos="50"
+        gotit:arrowSide="top"
+        />
+
+
+    <TextView
+        android:id="@+id/okc_status_msg"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="10dp"
+        android:layout_marginBottom="10dp"
+        android:layout_below="@+id/gpgParamsGotIt"
+        android:gravity="center"
+        android:text="@string/okc_not_installed"
+        android:textAppearance="@style/TextAppearance.AppCompat.Subhead"
+        android:textColor="@color/colorWarning" />
+
+    <Button
+        android:id="@+id/okc_btn_play"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/okc_status_msg"
+        android:layout_centerHorizontal="true"
+        android:text="@string/okc_install_googleplay"/>
+
+    <Button
+        android:id="@+id/okc_btn_fdroid"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/okc_btn_play"
+        android:layout_centerHorizontal="true"
+        android:text="@string/okc_install_fdroid"/>
+
+</RelativeLayout>

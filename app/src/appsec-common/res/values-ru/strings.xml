@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <string name="share_body">&appname;:\nОтправлять секретные сообщения с помощью &targetapp;.\n\n&dllink;</string>
+
+    <string name="decrypt_error_user_interaction_required">Требуется пароль</string>
+    <string name="decrypt_error_user_interaction_required__long">Пароль должен быть расшифрован!</string>
+    <string name="iab_body">Обновление поддерживает постоянное развитие и включает эти дополнительные функции:\n\n* Настраиваемые цвета\n* Настраиваемый контент приманкая\n* Неограниченные пароли</string>
+    <string name="tooltip_hidebutton_nothidden">Нажмите на эту кнопку, чтобы временно скрыть наложение &appname;.\n\nДлительно нажмите для полного выхода из &appname; и удалить все пароли. (Тревожная кнопка)</string>
+-->
+</resources>

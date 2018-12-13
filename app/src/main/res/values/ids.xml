@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+
+    <item name="controls_container" type="id"/>
+    <item name="compose_container" type="id"/>
+	<item name="help_container" type="id"/>
+
+
+</resources>

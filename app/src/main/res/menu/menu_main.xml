@@ -1,0 +1,33 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+
+
+    <item
+        android:id="@+id/action_share_app"
+        android:orderInCategory="1"
+        android:title="@string/action_share_app"
+        app:showAsAction="always"
+        android:icon="@drawable/ic_share_white_24dp"
+        />
+
+
+    <item
+        android:id="@+id/help"
+        android:icon="@drawable/ic_help_outline_white_24dp"
+        android:orderInCategory="100"
+        android:title="@string/action_help"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/about"
+
+        android:orderInCategory="200"
+        android:title="@string/action_about"
+        app:showAsAction="never" />
+
+    <item
+        android:id="@+id/menu_clear_ignored_stuff"
+
+        android:orderInCategory="300"
+        android:title="@string/action_clear_ignored_keys"
+        app:showAsAction="never" />
+</menu>

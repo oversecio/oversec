@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <string name="share_body">&appname;:\nEnviar mensajes secretos con &targetapp;.\n\n&dllink;</string>
+
+    <string name="decrypt_error_user_interaction_required">Se requiere Contraseña</string>
+    <string name="decrypt_error_user_interaction_required__long">¡Se requiere una Contraseña para descifrar!</string>
+    <string name="iab_body">Actualizar &appname; apoya el desarrollo continuo de la aplicación y hace posible que esas características adicionales:\n\n* Personalización de los colores\n* Contenido para los señuelos personalizado\n* Contraseñas ilimitadas.</string>
+    <string name="tooltip_hidebutton_nothidden">Pulsa este botón para ocultar temporalmente la superposición de &appname;.\n\Manténlo presionado para salir por completo de &appname; y borrar todas los señuelos. (¡Botón de pánico!)</string>
+-->
+</resources>

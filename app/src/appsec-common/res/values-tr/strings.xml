@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <string name="share_body">&appname;:\n&targetapp; ile gizli mesajlar gönder.\n\n&dllink;</string>
+
+    <string name="iab_body">Yükseltme uygulamayı geliştirmemizi destekler ve ek olarak şu özellikleri size sunar:\n\n* Renkleri özelleştirme\n* Özel sahte içerik\n* Sınırsız şifreli.</string>
+    <string name="tooltip_hidebutton_nothidden">Geçici olarak &appname; i gizlemek için bu butona dokunun.\nUzunca dokunmak &appname; i komple kapatır ve tüm şifreleri silmek. (Panic-Butonu!)</string>
+-->
+</resources>

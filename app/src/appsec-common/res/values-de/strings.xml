@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--
+<string name="share_body">&appname;:\nSende geheime Nachrichten mit &targetapp;\n\n&dllink;</string>
+
+    <string name="decrypt_error_user_interaction_required">Passwort erforderlich</string>
+    <string name="decrypt_error_user_interaction_required__long">Passwort erforderlich zum Entschlüsseln.</string>
+    <string name="iab_body">Durch den Upgrade unterstützt du die Entwicklung von &appname; und erhältst dies zusätzlichen Features:\n\n* Farben anpassen\n* Eigene Tarn-Texte\n* Unbegrenzt Passwörter</string>
+    <string name="tooltip_hidebutton_nothidden">Berühre diesen Button um &appname; zeitweise zu verstecken.\n\Berühren lang, um &appname; zu Beenden und alle Passwörter zu Löschen. (Panik-Funktion)</string>
+-->
+</resources>

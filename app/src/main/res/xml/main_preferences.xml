@@ -1,0 +1,36 @@
+<PreferenceScreen
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+
+
+
+        <CheckBoxPreference
+                android:key="@string/mainprefs_screenoffpanic_key"
+                android:title="@string/mainprefs_screenoffpanic_title"
+                android:summary="@string/mainprefs_screenoffpanic_summary" />
+
+        <CheckBoxPreference
+                android:key="@string/mainprefs_hidelauncheronpanic_key"
+                android:title="@string/mainprefs_hidelauncheronpanic_title"
+                android:summary="@string/mainprefs_hidelauncheronpanic_summary" />
+
+        <io.oversec.one.ui.DialercodeEditTextPreference
+                android:key="@string/mainprefs_launchersecretcode_key"
+                android:title="@string/mainprefs_launchersecretcode_title"
+                android:summary="@string/mainprefs_launchersecretcode_summary"
+                android:inputType="number"
+                android:defaultValue="@string/mainprefs_launchersecretcode_default"
+        />
+
+        <CheckBoxPreference
+                android:key="@string/mainprefs_relaxecache_key"
+                android:title="@string/mainprefs_relaxcache_title"
+                android:summary="@string/mainprefs_relaxcache_summary" />
+
+        <CheckBoxPreference
+                android:key="@string/mainprefs_allow_screenshot_key"
+                android:title="@string/mainprefs_allow_screenshot_title"
+                android:summary="@string/mainprefs_allow_screenshot_summary" />
+
+
+</PreferenceScreen>

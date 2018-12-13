@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:gotit="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:theme="@style/AppTheme">
+
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+        android:id="@+id/simpleSymParamsGotIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        gotit:arrowPos="50"
+        gotit:arrowSide="top"
+        gotit:gotit_id="@string/tooltipid_encryptionparams_simplesym_general"
+        gotit:help_alias="encparams_simple"
+        gotit:msg="@string/tooltip_encryptionparams_simplesym_general" />
+
+    <TextView
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center_vertical"
+            android:paddingLeft="16dp"
+
+            android:layout_toLeftOf="@+id/btnSimpleSymParamsEnterPassword"
+            android:layout_alignBottom="@+id/btnSimpleSymParamsEnterPassword"
+            android:layout_alignTop="@+id/btnSimpleSymParamsEnterPassword"
+            android:text="@string/simplesym_header_passwords"
+
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline" />
+
+    <ImageButton
+            android:id="@+id/btnSimpleSymParamsEnterPassword"
+            android:layout_width="@dimen/fab_size_normal"
+            android:layout_height="@dimen/fab_size_normal"
+            android:layout_below="@+id/simpleSymParamsGotIt"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="6dp"
+            android:layout_marginLeft="@dimen/fab_margin"
+
+            android:background="@drawable/fab_bg"
+            android:src="@drawable/ic_add_black_24dp" tools:ignore="ContentDescription"/>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_keys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/compose_sym_vg_padding_divider"
+        android:layout_below="@+id/btnSimpleSymParamsEnterPassword"
+        android:layout_marginRight="11dp"
+        tools:listitem="@layout/simplesym_listitem" />
+
+    <!-- needs to be below in code, so that it's on top of the recycler view -->
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+            android:id="@+id/simpleSymParamsGotItAppSec"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toLeftOf="@+id/btnSimpleSymParamsEnterPassword"
+            android:layout_below="@+id/simpleSymParamsGotIt"
+
+            gotit:arrowPos="20"
+            gotit:arrowSide="right"
+            gotit:gotit_id="@string/tooltipid_encryptionparams_simplesym_general_appsec"
+            gotit:help_alias="encparams_simple"
+            gotit:msg="@string/tooltip_encryptionparams_simplesym_general_appsec"
+
+    />
+
+    <View
+        android:id="@+id/compose_sym_vg_padding_divider"
+        style="@style/Divider"
+        android:layout_above="@+id/compose_sym_vg_padding" />
+
+
+    <LinearLayout
+        android:id="@+id/compose_sym_vg_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/compose_sym_vg_fab_divider"
+        android:layout_marginLeft="4dp"
+        android:orientation="horizontal">
+
+        <TextView
+            android:id="@+id/compose_sym_lbl_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/compose_lbl_padding"
+            android:textAppearance="?android:attr/textAppearanceListItemSmall"/>
+
+        <Spinner
+            android:id="@+id/spinner_sym_padding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/prompt_select_padding"
+            tools:listitem="@android:layout/simple_list_item_1" />
+    </LinearLayout>
+
+
+    <View
+        android:id="@+id/compose_sym_vg_fab_divider"
+        style="@style/Divider"
+        android:layout_above="@+id/fab_sym" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/compose_sym_vg_fab_divider"
+        android:layout_toLeftOf="@+id/fab_sym"
+        android:paddingTop="4dp"
+        android:paddingRight="4dp"
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/compose_sym_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorWarning" />
+
+        <CheckBox
+            android:id="@+id/cb_add_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_add_oversec_link" />
+    </LinearLayout>
+
+    <ImageButton
+            android:id="@+id/fab_sym"
+            android:layout_width="@dimen/fab_size_normal"
+            android:layout_height="@dimen/fab_size_normal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginLeft="@dimen/fab_margin"
+
+            android:background="@drawable/fab_bg"
+            android:src="@drawable/ic_lock_black_24dp" tools:ignore="ContentDescription"/>
+
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+
+
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_sym"
+        android:layout_alignParentRight="true"
+
+        gotit:arrowPos="90"
+        gotit:arrowSide="bottom"
+        gotit:gotit_id="@string/tooltipid_encryptionparams_encrypt_button"
+        gotit:help_alias="encparams_encrypt_button"
+        gotit:msg="@string/tooltip_encryptionparams_fab" />
+</RelativeLayout>

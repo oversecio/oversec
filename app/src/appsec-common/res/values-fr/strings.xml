@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <string name="share_body">&appname;:\nEnvoyer des messages secrets avec &targetapp;.\n\n&dllink;</string>
+
+    <string name="decrypt_error_user_interaction_required">Mot de passe requise</string>
+    <string name="decrypt_error_user_interaction_required__long">Saisie du mot de passe nécessaire pour déchiffrer!</string>
+    <string name="iab_body">L’upgrade est la seule façon de permettre le développement régulier de fonctionnalités supplémentaires:\n\n* Personnaliser les couleurs\n* Personnaliser le contenu du texte leurre\n* Plus de mots de passe</string>
+    <string name="tooltip_hidebutton_nothidden">Appuyez longuement sur ce bouton pour masquer temporairement &appname;.\n\nL’appui long permet de quitter complètement &appname; et efface toutes les mots des passe. (Panic-Button!)</string>
+-->
+</resources>

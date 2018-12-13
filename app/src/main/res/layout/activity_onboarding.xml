@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android" android:layout_width="match_parent"
+             android:layout_height="match_parent"
+             android:background="@color/blur"
+             android:paddingTop="40dp"
+             android:paddingBottom="40dp"
+             android:paddingLeft="0dp"
+             android:paddingRight="0dp"
+
+>
+
+    <android.support.v7.widget.CardView
+            xmlns:card_view="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            card_view:cardBackgroundColor="@android:color/white"
+            card_view:cardCornerRadius="6dp"
+            card_view:cardElevation="16dp"
+            card_view:cardUseCompatPadding="true"
+    >
+
+            <RelativeLayout
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_gravity="center"
+android:background="@drawable/tooltip_bg"
+                    android:padding="0dp"
+            >
+
+
+                <TextView
+                        android:id="@+id/headline"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:text="Welcome to WhatsSecret"
+                        android:padding="6dp"
+                        android:drawableLeft="@mipmap/ic_launcher"
+                        android:layout_gravity="center_horizontal"
+                        android:textAppearance="@style/TextAppearance.AppCompat.Large"
+                        android:layout_alignParentTop="true"
+                        android:drawablePadding="6dp"
+                        android:background="@color/colorPrimary"
+                        android:textColor="@color/colorTextLight"
+                        android:gravity="center"
+                        android:layout_margin="3dp"
+                />
+
+
+                <TextView
+                        android:id="@android:id/text1"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="@string/onboarding_text"
+                        android:padding="10dp"
+                        android:textAppearance="@style/gotit_msg"
+                        android:layout_below="@id/headline"
+
+                />
+
+                <Button
+                        android:id="@+id/btn_moreinfo"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@android:id/text1"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_alignParentLeft="true"
+                        android:text="@string/action_moreinfo"/>
+
+                <Button
+                        android:id="@+id/btn_gotit"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:layout_below="@android:id/text1"
+                        style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                        android:layout_alignParentRight="true"
+                        android:text="@string/action_gotit"/>
+            </RelativeLayout>
+
+
+    </android.support.v7.widget.CardView>
+</FrameLayout>
