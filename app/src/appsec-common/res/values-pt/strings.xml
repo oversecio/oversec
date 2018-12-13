@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <string name="share_body">&appname;:\nEnviar mensagens secretas com o &targetapp;.\n\n&dllink;</string>
+
+    <string name="decrypt_error_user_interaction_required">Senha requerida</string>
+    <string name="decrypt_error_user_interaction_required__long">Entrada de senha obrigatória para descriptografar!</string>
+    <string name="iab_body">Ao atualizar, você apoia o desenvolvimento e habilita estes recursos adicionais:\n\n* Cores personalizadas\n* Conteúdo de chamariz personalizado\n* Senhas ilimitadas</string>
+    <string name="tooltip_hidebutton_nothidden">Toque neste botão para ocultar temporariamente a sobreposição do &appname;.\n\nDê um toque longo para sair totalmente do &appname; e limpar todas as senhas. (Botão de pânico!)</string>
+-->
+</resources>

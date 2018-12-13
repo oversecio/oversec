@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+            xmlns:tools="http://schemas.android.com/tools"
+            xmlns:gotit="http://schemas.android.com/apk/res-auto"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:fillViewport="true">
+
+
+    <LinearLayout
+            android:orientation="vertical"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+    >
+
+
+        <EditText
+                android:id="@+id/edittext"
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="1"
+                android:layout_margin="8dp"
+                android:minHeight="128dp"
+                android:gravity="top"
+                android:inputType="textMultiLine"
+                android:hint="@string/compose_text_hint"
+        />
+
+        <LinearLayout android:orientation="horizontal" android:layout_width="match_parent"
+                      android:layout_height="wrap_content">
+            <View android:layout_width="wrap_content" android:layout_height="0dp" android:layout_weight="1"/>
+
+            <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+
+                    android:layout_width="260dp"
+                    android:layout_height="wrap_content"
+
+                    gotit:gotit_id="@string/tooltipid_compose_encrypt_button"
+                    gotit:help_alias="compose_encrypt_button"
+                    gotit:msg="@string/tooltip_compose_fab"
+                    gotit:arrowPos="20"
+                    gotit:arrowSide="right"
+            />
+             <ImageButton
+                    android:id="@+id/fab"
+                    android:layout_width="@dimen/fab_size_normal"
+                    android:layout_height="@dimen/fab_size_normal"
+
+                    android:layout_gravity="right"
+
+                    android:layout_marginBottom="@dimen/fab_margin"
+                    android:layout_marginLeft="@dimen/fab_margin"
+                    android:layout_marginRight="@dimen/fab_margin"
+                    android:background="@drawable/fab_bg"
+                    android:src="@drawable/ic_lock_black_24dp" tools:ignore="ContentDescription"/>
+
+
+        </LinearLayout>
+    </LinearLayout>
+
+
+</ScrollView>

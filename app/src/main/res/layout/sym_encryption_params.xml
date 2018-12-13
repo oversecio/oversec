@@ -1,0 +1,160 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:gotit="http://schemas.android.com/apk/res-auto"
+    android:theme="@style/AppTheme">
+
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+        android:id="@+id/symParamsGotIt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentTop="true"
+        gotit:gotit_id="@string/tooltipid_encryptionparams_sym_general"
+        gotit:help_alias="encparams_sym"
+        gotit:msg="@string/tooltip_encryptionparams_sym_general"
+        gotit:arrowPos="50"
+        gotit:arrowSide="top"
+        />
+
+
+    <LinearLayout
+        android:id="@+id/compose_sym_vg_no_key"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/symParamsGotIt"
+        android:gravity="right"
+        android:orientation="horizontal">
+
+
+        <TextView
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_vertical|left"
+
+            android:layout_weight="1"
+            android:text="@string/settings_no_key"
+            android:textAppearance="@style/TextAppearance.AppCompat.Body1" />
+
+
+        <ImageButton
+                android:id="@+id/compose_sym_btn_addkey"
+                android:layout_width="40dp"
+                android:layout_height="40dp"
+
+                android:layout_marginRight="5dp"
+                android:background="@drawable/fab_bg"
+
+                android:src="@drawable/ic_add_black_24dp" tools:ignore="ContentDescription"/>
+
+
+    </LinearLayout>
+
+
+
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/rv_keys"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/compose_sym_vg_padding_divider"
+        android:layout_below="@+id/compose_sym_vg_no_key"
+        tools:listitem="@layout/sym_listitem_with_checkbox"/>
+
+
+    <View
+        android:id="@+id/compose_sym_vg_padding_divider"
+        style="@style/Divider"
+        android:layout_above="@+id/compose_sym_vg_padding" />
+
+    <LinearLayout
+        android:id="@+id/compose_sym_vg_padding"
+        android:layout_width="match_parent"
+        android:layout_marginLeft="4dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/compose_sym_vg_fab_divider">
+
+        <TextView
+            android:id="@+id/compose_sym_lbl_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/compose_lbl_padding"
+            android:textAppearance="@style/MySubtitle" />
+
+        <Spinner
+            android:id="@+id/spinner_sym_padding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/prompt_select_padding"
+            tools:listitem="@android:layout/simple_list_item_1" />
+
+    </LinearLayout>
+
+
+
+    <View
+        android:id="@+id/compose_sym_vg_fab_divider"
+        style="@style/Divider"
+        android:layout_above="@+id/fab_sym" />
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/compose_sym_vg_fab_divider"
+        android:layout_toLeftOf="@+id/fab_sym"
+        android:paddingTop="4dp"
+        android:paddingRight="4dp"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/compose_sym_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorWarning" />
+
+        <CheckBox
+            android:id="@+id/cb_add_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_add_oversec_link" />
+    </LinearLayout>
+
+
+
+    <ImageButton
+            android:id="@+id/fab_sym"
+            android:layout_width="@dimen/fab_size_normal"
+            android:layout_height="@dimen/fab_size_normal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginTop="6dp"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginLeft="@dimen/fab_margin"
+
+            android:background="@drawable/fab_bg"
+            android:src="@drawable/ic_lock_black_24dp" tools:ignore="ContentDescription"/>
+
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fab_sym"
+        android:layout_alignParentRight="true"
+
+        gotit:gotit_id="@string/tooltipid_encryptionparams_encrypt_button"
+        gotit:help_alias="encparams_encrypt_button"
+        gotit:msg="@string/tooltip_encryptionparams_fab"
+        gotit:arrowPos="90"
+        gotit:arrowSide="bottom"
+        />
+
+</RelativeLayout>

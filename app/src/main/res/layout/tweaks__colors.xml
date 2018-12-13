@@ -1,0 +1,266 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+              xmlns:tools="http://schemas.android.com/tools" android:id="@+id/tweaks_list_appearance"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical">
+
+    <LinearLayout
+        android:id="@+id/ll_sliders"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+
+
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:id="@+id/ll_fontsize"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="20dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_fontsize"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <SeekBar
+                android:id="@+id/seekbar_fontsize"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_corners"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:minWidth="150dp"
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_corners"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <SeekBar
+                android:id="@+id/seekbar_corners"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_padding_top"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_padding_top"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <SeekBar
+                android:id="@+id/seekbar_padding_top"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_padding_left"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_padding_left"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+            <SeekBar
+                android:id="@+id/seekbar_padding_left"
+                style="?android:attr/progressBarStyleHorizontal"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2" />
+        </LinearLayout>
+
+
+        <FrameLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:layout_margin="24dp">
+
+            <TextView
+                style="@style/MyMedium"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:background="@color/sample_background"
+                android:text="Lorem Ipsum" />
+
+            <io.oversec.one.ovl.SampleNodeTextView
+                android:id="@+id/sample_text_view"
+                android:layout_width="200dp"
+                android:layout_height="24dp"
+                android:text="@string/sample_decrypted_text" />
+        </FrameLayout>
+
+        <RelativeLayout
+            android:id="@+id/upgrade_reminder"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_margin="5dp"
+            android:background="@drawable/tooltip_bg_transparent">
+
+            <Button
+                android:id="@+id/btn_upgrade"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_alignParentTop="true"
+                android:text="@string/action_upgrade" />
+
+            <TextView
+                android:id="@+id/okc_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:layout_toLeftOf="@id/btn_upgrade"
+                android:padding="6dp"
+                android:text="@string/upgrade_visual_settings"
+                android:textAppearance="@style/gotit_msg" />
+
+
+        </RelativeLayout>
+
+
+        <LinearLayout
+            android:id="@+id/ll_background"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_background"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <io.oversec.one.ui.ColorSeekBar
+                android:id="@+id/colorSliderBG"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:showAlphaBar="true" />
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_font"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+
+            android:orientation="horizontal"
+            android:paddingTop="10dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_font"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <io.oversec.one.ui.ColorSeekBar
+                android:id="@+id/colorSliderFG"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:showAlphaBar="true" />
+
+        </LinearLayout>
+
+
+        <LinearLayout
+
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <ImageButton
+                    android:id="@+id/fab"
+                    android:layout_width="@dimen/fab_size_normal"
+                    android:layout_height="@dimen/fab_size_normal"
+                    android:background="@drawable/fab_bg"
+                    android:src="@drawable/ic_lock_black_24dp" tools:ignore="ContentDescription"/>
+        </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/ll_button"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:paddingTop="5dp">
+
+            <TextView
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_gravity="center"
+                android:layout_weight="0.5"
+                android:text="@string/controls_slider_button"
+                android:textAppearance="@style/TextAppearance.AppCompat.Small" />
+
+
+            <io.oversec.one.ui.ColorSeekBar
+                android:id="@+id/colorSliderButton"
+
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:layout_weight="2"
+                app:showAlphaBar="true" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+</LinearLayout>

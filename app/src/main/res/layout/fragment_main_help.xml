@@ -1,0 +1,251 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+                                            xmlns:tools="http://schemas.android.com/tools" android:id="@+id/tweaks_tab__colors"
+                                            android:layout_width="wrap_content"
+                                            android:layout_height="wrap_content">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <LinearLayout android:id="@+id/vg_debugstuff"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <Button
+                    android:id="@+id/btn_enable_logging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="LOGGING ON"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button" tools:ignore="ButtonStyle"/>
+
+            <Button
+                    android:id="@+id/btn_disable_logging"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="LOGGING OFF"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button" tools:ignore="ButtonStyle"/>
+
+            <Button
+                    android:id="@+id/btn_consume_all"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+
+                    android:text="CONSUME ALL"
+                    android:textAppearance="@style/TextAppearance.AppCompat.Button" tools:ignore="ButtonStyle"/>
+        </LinearLayout>
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/settings_acsenabledok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tooltip_bg_transparent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@android:id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_acs_enabled_ok"
+                android:padding="6dp"
+                android:textAppearance="@style/gotit_msg"
+                android:layout_alignParentTop="true"
+                />
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/settings_acsnotenabled"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tooltip_bg"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@android:id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_acs_not_enabled"
+                android:padding="6dp"
+                android:textAppearance="@style/gotit_msg"
+                android:layout_alignParentTop="true"
+                />
+
+            <Button
+                android:id="@+id/btn_enable_acs_moreinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/text1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentLeft="true"
+                android:text="@string/action_moreinfo"/>
+
+            <Button
+                android:id="@+id/btn_enable_acs"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/text1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentRight="true"
+                android:text="@string/action_configure"/>
+        </RelativeLayout>
+
+
+
+
+
+
+
+
+
+        <RelativeLayout
+            android:id="@+id/settings_bossactive"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tooltip_bg"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@android:id/text1"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_boss_active"
+                android:padding="6dp"
+                android:textAppearance="@style/gotit_msg"
+                android:layout_alignParentTop="true"
+                />
+
+            <Button
+                android:id="@+id/btn_bosskey_moreinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/text1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentLeft="true"
+                android:text="@string/action_moreinfo"/>
+
+            <Button
+                android:id="@+id/btn_repanic"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@android:id/text1"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentRight="true"
+                android:text="@string/action_reenable_boss"/>
+        </RelativeLayout>
+
+
+        <Button
+            android:id="@+id/btn_help"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/settings_help"
+            android:drawableRight="@drawable/ic_help_outline_black_24dp"/>
+
+        <Button
+            android:id="@+id/btn_bugreport"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_send_bugreport"
+            android:drawableRight="@drawable/ic_mail_outline_black_24dp"/>
+
+        <Button
+            android:id="@+id/btn_share"
+            style="@style/Widget.AppCompat.Button.Small"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/action_share_app"
+            android:drawableRight="@drawable/ic_share_black_24dp"/>
+
+
+        <RelativeLayout
+            android:id="@+id/settings_upgrade"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tooltip_bg_transparent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/upgrade_text"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_upgrade"
+                android:padding="6dp"
+                android:textAppearance="@style/gotit_msg"
+                android:layout_alignParentTop="true"
+                />
+
+
+            <Button
+                android:id="@+id/btn_upgrade_now"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/upgrade_text"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentRight="true"
+                android:text="@string/action_upgrade"/>
+
+
+        </RelativeLayout>
+
+
+        <RelativeLayout
+            android:id="@+id/settings_okc"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@drawable/tooltip_bg_transparent"
+            android:layout_margin="5dp">
+
+            <TextView
+                android:id="@+id/okc_status"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/settings_okc_not_installed"
+                android:padding="6dp"
+                android:textAppearance="@style/gotit_msg"
+                android:layout_alignParentTop="true"
+                />
+
+            <Button
+                android:id="@+id/btn_okc_moreinfo"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/okc_status"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentLeft="true"
+                android:text="@string/action_moreinfo"/>
+
+            <Button
+                android:id="@+id/btn_okc_playstore"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/okc_status"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_alignParentRight="true"
+                android:text="@string/okc_install_googleplay"/>
+
+            <Button
+                android:id="@+id/btn_okc_fdroid"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/okc_status"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_centerInParent="true"
+                android:text="@string/okc_install_fdroid"/>
+
+
+        </RelativeLayout>
+
+
+
+    </LinearLayout>
+</android.support.v4.widget.NestedScrollView>

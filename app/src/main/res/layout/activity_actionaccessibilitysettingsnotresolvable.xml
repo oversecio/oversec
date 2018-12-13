@@ -1,0 +1,68 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingBottom="@dimen/activity_vertical_margin"
+    android:paddingLeft="@dimen/activity_horizontal_margin"
+    android:paddingRight="@dimen/activity_horizontal_margin"
+    android:paddingTop="@dimen/activity_vertical_margin"
+    tools:context="io.oversec.one.ui.ActionAccessibilitySettingsNotResolvableActivity">
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center"
+        android:background="@drawable/tooltip_bg"
+        android:padding="0dp"
+        >
+
+
+        <TextView
+            android:id="@+id/headline"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="@string/onboarding_title"
+            android:padding="6dp"
+            android:drawableLeft="@mipmap/ic_launcher"
+            android:layout_gravity="center_horizontal"
+            android:textAppearance="@style/TextAppearance.AppCompat.Headline"
+            android:layout_alignParentTop="true"
+            android:drawablePadding="14dp"
+            android:background="@drawable/tooltip_bg_primary_headline"
+            android:textColor="@color/colorTextLight"
+            android:gravity="center"
+            />
+
+
+        <TextView
+            android:id="@android:id/text1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/actionaccessibilitysettingsnotresolvable_text"
+            android:padding="10dp"
+            android:textAppearance="@style/gotit_msg"
+            android:layout_below="@id/headline"
+
+            />
+
+        <Button
+            android:id="@+id/btn_moreinfo"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/text1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_alignParentLeft="true"
+            android:text="@string/action_moreinfo"/>
+
+        <Button
+            android:id="@+id/btn_ok"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_below="@android:id/text1"
+            style="@style/Widget.AppCompat.Button.Borderless.Colored"
+            android:layout_alignParentRight="true"
+            android:text="@string/action_ok"/>
+    </RelativeLayout>
+
+</LinearLayout>

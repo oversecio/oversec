@@ -1,0 +1,229 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    xmlns:gotit="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/content_okc"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+  >
+
+    <View
+        style="@style/Divider"
+        android:layout_alignParentTop="true" />
+
+
+
+
+            <TextView
+                android:id="@+id/compose_pgp_lbl_own_key"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+
+                android:paddingTop="4dp"
+                android:text="@string/compose_pgp_lbl_ownkey"
+                android:textAppearance="@style/MySubtitle" />
+
+            <TextView
+                android:id="@+id/compose_pgp_tv_own_key_name"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/compose_pgp_lbl_own_key"
+                android:layout_toLeftOf="@+id/compose_pgp_btn_own_key"
+                android:text="foo@bar.com"
+                android:paddingLeft="7dp"
+                android:textAppearance="@style/Item.Head2" />
+
+            <TextView
+                android:id="@+id/compose_pgp_tv_own_key_hex"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@+id/compose_pgp_tv_own_key_name"
+                android:layout_toLeftOf="@+id/compose_pgp_btn_own_key"
+                android:paddingLeft="7dp"
+                android:text="[0x1234203030303030]"
+                android:textAppearance="@style/Item.Sub2" />
+
+            <ImageButton
+                    android:id="@+id/compose_pgp_btn_own_key"
+                    style="@style/ButtonStyleEvenSmaller"
+                    android:layout_width="40dp"
+                    android:layout_height="wrap_content"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentTop="true"
+                    android:src="@drawable/ic_account_box_black_24dp" tools:ignore="ContentDescription"/>
+
+            <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+                android:id="@+id/select_ownkey_tooltip"
+                android:layout_width="280dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/compose_pgp_btn_own_key"
+                android:layout_alignParentRight="true"
+
+                gotit:gotit_id="@string/tooltipid_encryptionparams_gpg_choose_own_key"
+                gotit:help_alias="encparams_pgp"
+                gotit:msg="@string/tooltip_encryptionparams_gpg_choose_own_key"
+                gotit:arrowPos="85"
+                gotit:arrowSide="top"
+
+                />
+
+            <CheckBox
+                android:id="@+id/cb_pgp_sign"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/compose_pgp_btn_own_key"
+                android:button="@null"
+
+                android:drawableRight="?android:attr/listChoiceIndicatorMultiple"
+                android:text="@string/compose_pgp_lbl_private_sign" />
+
+
+
+
+
+
+
+
+    <View
+        android:id="@+id/compose_pgp_lbl_recipients_divider"
+        style="@style/Divider"
+        android:layout_below="@+id/compose_pgp_tv_own_key_hex" />
+
+    <TextView
+        android:id="@+id/compose_pgp_lbl_recipients"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@+id/compose_pgp_lbl_recipients_divider"
+
+        android:paddingTop="4dp"
+        android:text="@string/compose_pgp_lbl_recipient_public_keys"
+        android:textAppearance="@style/MySubtitle" />
+
+
+    <ListView
+        android:id="@+id/compose_pgp_lv_recipients"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_above="@+id/compose_pgp_vg_padding_divider"
+        android:layout_below="@+id/compose_pgp_lbl_recipients"
+        android:theme="@style/AppTheme"
+        tools:listitem="@layout/gpg_listitem_recipient" />
+
+    <ImageButton
+            android:id="@+id/compose_pgp_btn_add_recipient"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+
+            android:layout_alignParentRight="true"
+
+            android:layout_below="@+id/compose_pgp_lbl_recipients_divider"
+            android:layout_marginRight="5dp"
+            android:background="@drawable/fab_bg"
+
+            android:src="@drawable/ic_add_black_24dp" tools:ignore="ContentDescription"/>
+
+
+    <View
+        android:id="@+id/compose_pgp_vg_padding_divider"
+        style="@style/Divider"
+        android:layout_above="@+id/compose_pgp_vg_padding" />
+
+
+    <LinearLayout
+        android:id="@+id/compose_pgp_vg_padding"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="4dp"
+        android:layout_above="@+id/compose_pgp_vg_fab_divider">
+
+        <TextView
+            android:id="@+id/compose_pgp_lbl_padding"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/compose_lbl_padding"
+            android:textAppearance="@style/MySubtitle" />
+
+        <Spinner
+            android:id="@+id/spinner_pgp_padding"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:prompt="@string/prompt_select_padding"
+            tools:listitem="@android:layout/simple_list_item_1" />
+
+    </LinearLayout>
+
+    <View
+        android:id="@+id/compose_pgp_vg_fab_divider"
+        style="@style/Divider"
+        android:layout_above="@+id/fabb_pgp" />
+
+
+
+
+    <ImageButton
+            android:id="@+id/fabb_pgp"
+            android:layout_width="@dimen/fab_size_normal"
+            android:layout_height="@dimen/fab_size_normal"
+            android:layout_alignParentBottom="true"
+            android:layout_alignParentRight="true"
+            android:layout_marginBottom="@dimen/fab_margin"
+            android:layout_marginLeft="@dimen/fab_margin"
+
+            android:layout_marginTop="@dimen/fab_margin"
+            android:background="@drawable/fab_bg"
+            android:src="@drawable/ic_lock_black_24dp" tools:ignore="ContentDescription"/>
+
+    <LinearLayout
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentLeft="true"
+        android:layout_below="@+id/compose_pgp_vg_fab_divider"
+        android:layout_toLeftOf="@+id/fabb_pgp"
+        android:paddingTop="4dp"
+        android:paddingRight="4dp"
+
+        android:orientation="vertical">
+
+        <TextView
+            android:id="@+id/compose_pgp_warning"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:text="No other recipients than yourself. Are you sure? or what"
+            android:textAppearance="@style/TextAppearance.AppCompat.Small"
+            android:textColor="@color/colorWarning" />
+
+        <CheckBox
+            android:id="@+id/cb_add_link"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/checkbox_add_oversec_link" />
+    </LinearLayout>
+
+
+
+    <io.oversec.one.crypto.ui.util.StandaloneTooltipView
+        android:id="@+id/fabb_pgp_tooltip"
+        android:layout_width="260dp"
+        android:layout_height="wrap_content"
+        android:layout_above="@id/fabb_pgp"
+        android:layout_alignParentRight="true"
+
+        gotit:gotit_id="@string/tooltipid_encryptionparams_encrypt_button"
+        gotit:help_alias="encparams_encrypt_button"
+        gotit:msg="@string/tooltip_encryptionparams_fab"
+        gotit:arrowPos="90"
+        gotit:arrowSide="bottom"
+        />
+</RelativeLayout>

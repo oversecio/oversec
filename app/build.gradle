@@ -1,0 +1,275 @@
+apply plugin: 'com.android.application'
+apply plugin: 'com.gladed.androidgitversion'
+apply plugin: 'witness'
+
+
+def rpx = project.rootProject.ext
+
+rpx.APPTGTS = [:]
+rpx.APPTGTS.put("oversec",[applicationId: "io.oversec.one", app_name: "Oversec", acs_label: "Oversec", targetapp: "", website: "https://www.oversec.io", dllink: "http://dl.oversec.io"])
+rpx.APPTGTS.put("intern",[applicationId: "io.oversec.one", app_name: "INTERN", acs_label: "INTERN", targetapp: "", website: "https://intern.oversec.io", dllink: "http://dl-intern.oversec.io"])
+
+
+rpx.langs = ["","-de","-es","-fr","-pt","-ru","-tr"]
+
+rpx.applyAppTgt = { scope, appTgt ->
+    scope.applicationId rpx.APPTGTS[appTgt].applicationId
+    scope.resValue "string", "app_name", rpx.APPTGTS[appTgt].app_name
+    scope.resValue "string", "acs_label", rpx.APPTGTS[appTgt].acs_label
+    scope.resValue "string", "targetapp",  rpx.APPTGTS[appTgt].targetapp
+    scope.resValue "string", "website",  rpx.APPTGTS[appTgt].website
+    scope.resValue "string", "dllink",  rpx.APPTGTS[appTgt].dllink
+};
+
+
+android {
+    applicationVariants.all { variant ->
+        if (variant.buildType.name == 'release') {
+            variant.outputs.each { output ->
+                output.outputFileName = output.outputFileName.replace(".apk", "-${variant.versionCode}.apk")
+            }
+        }
+    }
+
+    applicationVariants.all { variant ->
+        if (variant.getBuildType().isMinifyEnabled()) {
+            variant.assemble.doLast {
+                copy {
+                    from variant.mappingFile
+                    into "${rootDir}/proguardMappings"
+                    rename { String fileName ->
+                        "mapping-${variant.name}-${variant.versionCode}.txt"
+                    }
+                }
+            }
+        }
+    }
+
+
+    compileSdkVersion 28
+
+    defaultConfig {
+        applicationId "io.oversec.one"
+        minSdkVersion 21
+        targetSdkVersion 28
+
+        versionCode androidGitVersion.code()
+        versionName androidGitVersion.name()
+    }
+
+    buildTypes {
+
+        release {
+            //debuggable=true //for IAB debugging
+            //multiDexEnabled true  //for IAB debugging
+
+            minifyEnabled true
+            proguardFiles 'proguard-android-optimize-patched.txt', 'proguard-rules.pro'
+            buildConfigField "java.lang.Long", "X_BUILD_TIME", "new Long("+System.currentTimeMillis()+"L)"
+
+        }
+
+        debug {
+            multiDexEnabled true
+            buildConfigField "java.lang.Long", "X_BUILD_TIME", "new Long("+System.currentTimeMillis()+"L)"
+        }
+    }
+
+    flavorDimensions "targetapp"
+
+    productFlavors {
+
+        oversec {
+
+            applyAppTgt(oversec, "oversec")
+
+            buildConfigField "String", "GOOGLE_PLAY_PUBKEY", "\"MIIBIjANBgkqhkiG9w0BAQEFAAOCAQ8AMIIBCgKCAQEAoYCl8Ef7/5tRboyPcvcWqzVM1l3yTN28VepCzkTc1iHBJqlDd0d3k+ajZHKvyrvEK8JjjGqX/DkaESi7PNV03FptWI1HQP9P4J02Gm0nP/pwt6a4WAjbE2HSWlleBV/H66ZEQR6MhwKtI9rLFqPIxfNLJMDONYQ4/xIM6bMWNlvb59O0Yb9iEJOA+mJwMOZZoY9vadt5mUqi6bchjTXuOS3iCCrAixkhMIA8kpZSq40LI7ya3QSEnSRZJSRKccBagGxH12w3/5k/s1mnRIO7T/4cX9Kvi8+Q7pb0Zn0CpG0AEm078ON1+5dlJUHYMli0+J7JL2IL11txN/21FuhM4QIDAQAB\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_PROMO", "\"sku.oversec.one.fullversion.promo.v0\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_A", "\"sku.oversec.one.fullversion.a.v0\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_B", "\"sku.oversec.one.fullversion.b.v0\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_C", "\"sku.oversec.one.fullversion.c.v0\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_D", "\"sku.oversec.one.fullversion.d.v0\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_E", "\"sku.oversec.one.fullversion.e.v0\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_F", "\"sku.oversec.one.fullversion.f.v1\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_G", "\"sku.oversec.one.fullversion.g.v1\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_H", "\"sku.oversec.one.fullversion.h.v1\""
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_I", "\"sku.oversec.one.fullversion.i.v1\""
+
+            buildConfigField "String", "DONATION_BTC", "\"16tan5fBNJ6n1QmVxwvvondyvuwgx1W6fE\""
+            buildConfigField "String", "DONATION_ETH", "\"0xE71c3b07dF8b13f3B99e537f541F91E40d09285a\""
+            buildConfigField "String", "DONATION_DASH", "\"5Jmj6oHucSZrQZ6JUiZu1sxHrX1adwfiJZURSRXJkDvZ6xAMrDg\""
+            buildConfigField "String", "DONATION_IOTA", "\"ZVFLHYRAJWGZDQVKJINUXDZQTXWR9GEMZSAIMNSDBWAYCQWHTFYFMILDVZORSZ9DEXKSLF9EKYSZHTAW9E9ROAZGLZ\""
+
+        }
+        intern {
+
+            applyAppTgt(intern, "intern")
+
+            buildConfigField "String", "GOOGLE_PLAY_PUBKEY", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_PROMO", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_A", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_B", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_C", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_D", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_E", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_F", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_G", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_H", "null"
+            buildConfigField "String", "GOOGLE_PLAY_SKU_FULLVERSION_I", "null"
+
+            buildConfigField "String", "DONATION_BTC", "null"
+            buildConfigField "String", "DONATION_ETH", "null"
+            buildConfigField "String", "DONATION_DASH", "null"
+            buildConfigField "String", "DONATION_IOTA", "null"
+        }
+
+    }
+
+    Properties localProperties = new Properties()
+    localProperties.load(project.file('local.properties').newDataInputStream())
+
+    if (localProperties.containsKey("signing.properties")
+            && new File(localProperties.get("signing.properties")).exists()) {
+
+        Properties props = new Properties()
+        props.load(new FileInputStream(file(localProperties.get("signing.properties"))))
+
+        println "Loaded signing properties from " + localProperties.get("signing.properties")
+
+        signingConfigs {
+            release {
+                storeFile file(props['keystore'])
+                storePassword props['keystore.password']
+                keyAlias props['keyAlias']
+                keyPassword props['keyPassword']
+            }
+        }
+        buildTypes.release.signingConfig = signingConfigs.release
+    } else {
+        buildTypes.release.signingConfig = null
+        println "No signing configuration provided!"
+
+    }
+
+    // NOTE: Lint is disabled because it slows down builds,
+    // to enable it comment out the code at the bottom of this build.gradle
+    lintOptions {
+        // Do not abort build if lint finds errors
+        abortOnError false
+
+        checkAllWarnings true
+        htmlReport true
+        htmlOutput file('lint-report.html')
+    }
+
+    dexOptions {
+        threadCount = 6
+        preDexLibraries = true
+        // dexInProcess requires much RAM, which is not available on all dev systems
+        // dexInProcess = false
+        jumboMode = true
+        javaMaxHeapSize "6g"
+    }
+
+    packagingOptions {
+        exclude 'LICENSE.txt'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE.txt'
+        exclude 'META-INF/DEPENDENCIES'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/NOTICE'
+        exclude '.readme'
+    }
+}
+
+dependencies {
+    implementation fileTree(include: ['*.jar'], dir: 'libs')
+
+    implementation project(':libraries:oversec_crypto:crypto')
+
+    implementation 'io.github.kobakei:ratethisapp:1.2.0'
+    implementation 'org.sufficientlysecure:html-textview:3.6'
+    implementation 'org.commonjava.googlecode.markdown4j:markdown4j:2.2-cj-1.1'
+
+    implementation 'com.android.support:multidex:1.0.3'
+    implementation 'com.android.support:support-v13:28.0.0'
+    implementation 'com.android.support:appcompat-v7:28.0.0'
+    implementation 'com.android.support:cardview-v7:28.0.0'
+    implementation 'com.android.support:support-v4:28.0.0'
+    implementation 'com.android.support:design:28.0.0'
+
+    testImplementation 'junit:junit:4.12'
+}
+
+//Note: update with  ./gradlew  -q calculateChecksums
+dependencyVerification {
+    verify = [
+            'org.commonjava.googlecode.markdown4j:markdown4j:2.2-cj-1.1:markdown4j-2.2-cj-1.1.jar:28eb991f702c6d85d6cafd68c24d1ce841d1f5c995c943f25aedb433c0c13f60',
+            'org.sufficientlysecure:html-textview:3.6:html-textview-3.6.aar:39c1a1a8ca1d127f0120527b2d1a9b035d0c726237a4e7e9d28f8703da542aa1',
+    ]
+}
+
+// NOTE: This disables Lint!
+tasks.whenTaskAdded { task ->
+    if (task.name.contains('lint')) {
+        task.enabled = false
+    }
+}
+
+
+import groovy.io.FileType
+def currentDir = new File('app/src')
+currentDir.eachFile FileType.DIRECTORIES, {
+    println ">>>>>>>>>>>>>>>>>>>"+ it.name
+    try { apply from: "src/"+it.name+"/mixin.gradle" } catch (ex) {}
+}
+
+// poor-man's preprocess to generate app-specific string resources 
+rpx.replaceEntities = { apptgt, sfile, tdir, tfile ->
+
+    ant.mkdir(dir: tdir)
+    ant.copy(file: "$sfile.canonicalPath", tofile: "$tfile.canonicalPath")
+
+    ant.replace(file: "$tfile.canonicalPath", token: "&appname;", value: rpx.APPTGTS[apptgt].app_name)
+    ant.replace(file: "$tfile.canonicalPath", token: "&targetapp;", value: rpx.APPTGTS[apptgt].targetapp)
+    ant.replace(file: "$tfile.canonicalPath", token: "&acs_label;", value: rpx.APPTGTS[apptgt].acs_label)
+    ant.replace(file: "$tfile.canonicalPath", token: "&website;", value: rpx.APPTGTS[apptgt].website)
+    ant.replace(file: "$tfile.canonicalPath", token: "&dllink;", value: rpx.APPTGTS[apptgt].dllink)
+}
+
+task preBuildMangleEntities << {
+    def tasknames = project.gradle.startParameter.taskNames
+
+    def taskname = tasknames[0]
+    def apptgt = taskname.replace(":app:","").replace("assemble","").replace("generate","").replace("install","").replace("Debug","").replace("Release","").replace("Sources","").toLowerCase()
+
+    def rootDir = project.projectDir.getParent()
+
+    rpx.langs.each {
+        def tdir = new File(rootDir, "app/src/" + apptgt + "/res/values${it}")
+
+        def sfile = new File(rootDir, "app/src/appsec-common/res/values${it}/strings.xml")
+        def tfile = new File(tdir, "strings_generated.xml")
+        replaceEntities (apptgt, sfile, tdir, tfile)
+
+        sfile = new File(rootDir, "libraries/oversec_crypto/crypto/src/main/res/values${it}/strings.xml")
+        tfile = new File(tdir, "strings_crypto_generated.xml")
+        replaceEntities (apptgt, sfile, tdir, tfile)
+
+        sfile = new File(rootDir, "libraries/oversec_crypto/crypto/src/main/res/values${it}/strings_core.xml")
+        tfile = new File(tdir, "strings_crypto_core_generated.xml")
+        replaceEntities (apptgt, sfile, tdir, tfile)
+    }
+}
+
+gradle.projectsEvaluated {
+    preBuild.dependsOn(preBuildMangleEntities)
+}
+
+clean.doFirst {
+    ant.delete() {
+        fileset(dir: 'src') {
+            include(name: '**/strings*_generated.xml')
+        }
+    }
+}

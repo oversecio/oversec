@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+              android:layout_width="wrap_content"
+              android:layout_height="wrap_content"
+              android:layout_margin="40dp"
+              android:padding="10dp"
+              android:clipToPadding="false"
+              android:theme="@style/MyAppTheme"
+
+>
+    <RelativeLayout
+            android:id="@+id/content"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:padding="10dp"
+            android:elevation="10dp"
+                android:background="@drawable/tooltip_bg"
+            >
+
+
+        <TextView
+
+                android:id="@+id/text"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_alignParentTop="true"
+                android:drawableLeft="@drawable/ic_warning_black_24dp"
+                android:drawablePadding="10dp"
+
+                android:padding="5dp"
+                android:text="@string/loremlong"
+                android:textAppearance="@style/TextAppearance.AppCompat.Subhead"/>
+
+        <LinearLayout
+                android:id="@+id/custom_container"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/text"
+                android:orientation="vertical">
+
+
+        </LinearLayout>
+
+        <Button
+                android:id="@+id/buttonCancel"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentLeft="true"
+                android:layout_below="@id/custom_container"
+                android:minHeight="10dp"
+                android:text="@string/action_cancel"/>
+
+        <Button
+                android:id="@+id/buttonNeutral"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/custom_container"
+                android:layout_centerInParent="true"
+                android:minHeight="10dp"
+                android:text="Ignore\nthis text"/>
+
+
+        <Button
+                android:id="@+id/buttonOK"
+                style="@style/Widget.AppCompat.Button.Borderless.Colored"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_below="@id/custom_container"
+                android:minHeight="10dp"
+                android:text="@string/action_ok"/>
+
+    </RelativeLayout>
+</LinearLayout>

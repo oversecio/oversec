@@ -1,0 +1,13 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ImageButton xmlns:android="http://schemas.android.com/apk/res/android"
+
+             xmlns:tools="http://schemas.android.com/tools" android:layout_margin="5dp"
+             android:layout_width="40dp"
+             android:layout_height="40dp"
+             android:theme="@style/AppTheme"
+             android:background="@drawable/fab_bg"
+             android:src="@drawable/ic_info_outline_black_24dp" tools:ignore="ContentDescription">
+
+</ImageButton>
+

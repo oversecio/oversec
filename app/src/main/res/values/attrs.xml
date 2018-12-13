@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <declare-styleable name="MaxHeightScrollView">
+        <attr name="maxxxHeight" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="ColorSeekBar">
+        <attr name="colors" format="reference" />
+        <attr name="barHeight" format="dimension" />
+        <attr name="thumbHeight" format="dimension" />
+        <attr name="showAlphaBar" format="boolean" />
+        <attr name="alphaBarValue" format="integer" />
+        <attr name="colorBarValue" format="integer" />
+        <attr name="bgColor" format="color"/>
+        <attr name="barMargin" format="dimension"/>
+        <attr name="maxValue" format="integer"/>
+    </declare-styleable>
+</resources>
