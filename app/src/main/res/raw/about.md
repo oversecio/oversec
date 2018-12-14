@@ -2,7 +2,7 @@
 
 **[Privacy Policy](https://www.oversec.io/policy.html)**
 
-[Oversec Open-Source Crypto-Module](https://github.com/oversecio/oversec-crypto)
+[Oversec Open-Source Repository](https://github.com/oversecio/oversec)
 
 ## Libraries
   * [Android Support Libraries](http://developer.android.com/tools/support-library/index.html) (Apache License v2)
