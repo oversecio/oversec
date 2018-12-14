@@ -126,8 +126,10 @@ android {
     }
 
     Properties localProperties = new Properties()
-    localProperties.load(project.file('local.properties').newDataInputStream())
-
+    try {
+      localProperties.load(project.file('local.properties').newDataInputStream())
+    } catch (ex) {}
+    
     if (localProperties.containsKey("signing.properties")
             && new File(localProperties.get("signing.properties")).exists()) {
 
