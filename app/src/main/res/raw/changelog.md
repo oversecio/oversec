@@ -1,4 +1,4 @@
-### 1.5.0
+### 1.5.2
 - major rework, open-sourced
 
 ### 1.3.15
