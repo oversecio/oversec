@@ -198,20 +198,10 @@ public class IabUtil extends BroadcastReceiver implements IabHelper.OnIabSetupFi
     }
 
     public synchronized void checkFullVersion(final boolean loadSkuDetails, final FullVersionListener callback) {
-        if (BuildConfig.DEBUG) {
-            if (callback != null) {
-                invokeCallback(callback, true);
-
-            } else {
-                fireChange(true);
-            }
-            return;
-        }
-
-        if (!isIabAvailable()) {
+        if (!isIabAvailable() || BuildConfig.DEBUG) {
             Ln.d("IAB, queryInventory impossible no IAB support!");
             if (callback != null) {
-                invokeCallback(callback, false);
+                invokeCallback(callback, true);
 
             } else {
                 fireChange(false);
@@ -350,7 +340,7 @@ public class IabUtil extends BroadcastReceiver implements IabHelper.OnIabSetupFi
 
 
     public boolean isShowUpgradeButton(Context ctx) {
-        if (BuildConfig.DEBUG) {
+        if (!isIabAvailable()||BuildConfig.DEBUG) {
             return false;
         }
 
