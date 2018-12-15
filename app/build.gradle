@@ -206,6 +206,7 @@ dependencies {
     implementation 'com.android.support:design:28.0.0'
 
     testImplementation 'junit:junit:4.12'
+    testImplementation project(':libraries:oversec_crypto:crypto')
 }
 
 //Note: update with  ./gradlew  -q calculateChecksums
@@ -247,7 +248,8 @@ task preBuildMangleEntities << {
     def tasknames = project.gradle.startParameter.taskNames
 
     def taskname = tasknames[0]
-    def apptgt = taskname.replace(":app:","").replace("assemble","").replace("generate","").replace("install","").replace("Debug","").replace("Release","").replace("Sources","").toLowerCase()
+    def apptgt = taskname.replace(":app:","").replace("assemble","").replace("test","").replace("generate","").replace("install","").replace("Debug","").replace("Release","").replace("Sources","").replace("UnitTest","").toLowerCase()
+    if (apptgt.isEmpty()) {apptgt = "intern"}
 
     def rootDir = project.projectDir.getParent()
 
