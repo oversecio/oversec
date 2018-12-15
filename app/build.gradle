@@ -227,7 +227,6 @@ tasks.whenTaskAdded { task ->
 import groovy.io.FileType
 def currentDir = new File('app/src')
 currentDir.eachFile FileType.DIRECTORIES, {
-    println ">>>>>>>>>>>>>>>>>>>"+ it.name
     try { apply from: "src/"+it.name+"/mixin.gradle" } catch (ex) {}
 }
 
