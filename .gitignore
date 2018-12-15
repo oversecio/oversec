@@ -1,6 +1,7 @@
 app/src/oversec
 app/src/whatsapp
 app/src/intern
+app/src/clean
 
 # Built application files
 *.apk
