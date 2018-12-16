@@ -1,4 +1,7 @@
-### 1.5.2
+### 1.5.4
+- released on f-droid
+
+### 1.5.3
 - major rework, open-sourced
 
 ### 1.3.15
