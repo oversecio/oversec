@@ -1,0 +1,27 @@
+<b>Oversec transparan bir ŷekilde herhangi bir uygulamadaki metni ŷifreler ve deŷifre eder.</b>
+
+Oversec uygulamasýný özel, ŷifreli chat ve email mesajlaŷmasý için veya telefonunuzda özel ŷifreli notlar tutmak için kullanabilirsiniz.
+
+Demo videolarýmýzý izleyin:
+Tanýtým: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
+Emailleri ŷifreleme: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
+Resimleri ŷifreleme: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+
+Oversec ana uygulamayý sorgulamadan çalýŷýr, Oversec uygulamasý Whatsapp™, Line™, Snapchat™, Instagram™ ve diŵer uygulamalarla uyumlu çalýŷabilir. Oversec ayný zamanda Gmail veya diŵer Elektronik Posta uygulamalarý aracýlýŵýyla PGP ile ŷifrelenmiŷ mesajlar göndermenizi ve almanýzý destekler.
+
+Uçtan uca ŷifreleme dünde kaldý. Oversec "Eye-to-Eye" ŷifrelemeyi tanýtýyor. <b>Ŷifrelenmiŷ veri sadece alýcýnýn ekranýnda görüldüŵünde deŷifre edilir.</b> Hiç bir ŷifresiz metin sistemde kalýcý deŵildir ve böylece veriler dosya sisteminden çýkartýlamaz veya bulut sistemler üzerinde yedeklenmez. 
+
+Oversec'i ayný zamanda o kadar dikkatlice tasarladýk ki, hiçbir ŷekilde internet eriŷimine ihtiyaç duymaz. Böylece deŷifre edilmiŷ bilgilerin cihazdan ayrýlmayacaŵýna tamamen emin olabilirsiniz.
+
+<u>Nasýl çalýŷýr:</u>
+
+Oversec sürekli olarak ekrandaki metinleri monitör eder. Ŷifreli bir metin bulduŵunda, deŷifre etmeyi dener ve deŷifre edilmiŷ metni ŷifreli metnin yerine gösterir. Tam tersi olarak, girdi alanýndan metin okuyabilir, onu ŷifreleyebilir ve tekrar ŷifreli metni geri koyabilirsiniz. Bir metni ŷifrelemek için, Oversec aktif giri alanýnýn yanýna bir buton ekler. Gizlenmesi istenen metin girildikten sonra butona basýldýŵýnda, Oversec metni okuyup, ŷifreleyip daha sonra ŷifrelenmiŷ metni ilgili alana ekler. Ŷimdi ilgili uygulamanýn gönderimine hazýr ve uygulama ŷifrelenmiŷ bir metin yolladýŵýndan dahi habersiz.
+
+Oversec ayný zamanda ŷifrelenmiŷ mesajý kodlamak için tamamen benzersiz bir yol izler. Ŷifrelenmiŷ metni görünmez (zero width-sýfýr geniŷlik) karakterlerle kaydeder ve sizin en sona sahte bir baŷka metin girmenize olanak tanýr. Bu sayede metin gerçekte gizlenmiŷ ŷifreli bir metin taŷýmasýna raŵmen sadece "Güneŷ parlýyor" gibi ŷifreli metinle ilgisiz ve hiçbir ŷifreleme izi barýndýrmayan bir metin gösterir.
+
+Oversec sayesinde ayný zamanda fotoŵraflarýnýzý ŷifreleyip gönderebilirsiniz. Oversec'in benzersiz özelliklerinden biri de kamera modunda sizin fotoŵrafý ŷifrelenmiŷ olarak çekip orjinalini saklamanýza ihtiyaç duymadan göndermenize olanak saŵlamasýdýr. 
+
+Oversec verilerinizi simetrik anahtarlama (ChaCha20 cipher + Poly1350 MAC) ya da asimetrik PGP (OpenKeyChain uygulamasýyardýmýyla) kullanarak ŷifreleme yapar.
+
+
+Bu uygulama Erişilebilirlik hizmetlerini kullanıyor.

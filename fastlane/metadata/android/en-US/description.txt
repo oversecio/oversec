@@ -1,0 +1,30 @@
+<b>Oversec transparently encrypts and decrypts any text in any app</b>
+
+You can use it to exchange private encrypted and covert chat- or email messages or store your own encrypted notes on your phone.
+
+See our demo videos:
+Introduction: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
+Encrypting Emails: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
+Encrypting Images: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+
+Oversec is completely agnostic of the subjacent app, it works with Whatsapp™, Line™, Snapchat™, Instagram™ or any other chat app. It also supports sending and receiving PGP encrypted messages with the Gmail™  or any other Email app.
+
+End-to-End Encryption was yesterday. Oversec introduces "Eye-to-Eye" encryption. <b>Encrypted data is only decrypted while it is shown on the screen!</b> No clear text is ever persisted and thus cannot be extracted from the file system or accidentally be backed up into the cloud.
+
+We also carefully designed Oversec so that it doesn't require internet access. Because of that, you can rest assured that no decrypted information can ever leave your device.
+
+<u>How it works:</u>
+
+Oversec constantly monitors the text on your screen. When it finds an encrypted text, it tries to decrypt it and then shows the decrypted text as an overlay in place of the encrypted text. Conversely, it can read text out of an input field, encrypt it, and then put the encrypted text back into the input field.
+
+In order to encrypt a text, Oversec shows a button next to an active input field. After having entered the secret text, tapping that button makes Oversec read the text, encrypt it and put back the encrypted text into the field. It is now ready to be sent in the subjacent app as usual - the app doesn't even know that it is sending encrypted data!
+
+Oversec also features a unique way of encoding the encrypted messages. It stores the encrypted text in invisible (zero-width) characters and let's you add decoy text at the end. That way, a message will just show e.g. "The sun is shining!" with no visible sign of any encryption, whereas in reality it contains a hidden encrypted message.
+
+You may also encrypt and send photos through Oversec - its unique camera mode even allows you to take and send an encrypted photo without ever storing the original photo on the device.
+
+Oversec encrypts your data either using symmetric keys  (using ChaCha20 cipher + Poly1305 MAC ) or using asymmetric PGP encryption (making use of the OpenKeychain app [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
+
+The encryption related code is open source and can be found here: https://github.com/oversecio/oversec_crypto
+
+This app uses Accessibility services.

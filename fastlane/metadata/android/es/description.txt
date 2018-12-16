@@ -1,0 +1,32 @@
+<b>Oversec encripta y descifra claramente cualquier texto en cualquier aplicación</b>
+
+Utiliza Oversec para intercambiar mensajes privados y encriptados de correo electrónico o de chat, o para guardar tus propias notas encriptadas en tu teléfono.
+
+Ve nuestros videos de demostración: 
+Introducción: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
+Encriptación de los correos electrónicos: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
+Encriptación de imágenes: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+
+
+Oversec es completamente independiente de la aplicación subyacente y, además, trabaja con Whatsapp™, Line™, Snapchat™, Instagram™ o cualquier otra aplicación de chat. También es compatible con el envío y la recepción de mensajes encriptados con PGP en Gmail™ o cualquier otra aplicación de correo electrónico.
+
+La encriptación de extremo a extremo es cosa del pasado. Oversec presenta la encriptación de «ojo a ojo»: <b>¡los datos encriptados sólo se descifran cuando se ven en la pantalla!</b> Nunca se muestra un texto claramente y, por lo tanto, el texto no puede ser extraído del sistema de archivos o respaldarse accidentalmente en la nube.
+
+Además, también deiseñamos cuidadosamente Oversec para que no requiera acceso a Internet y, gracias a esto, puedes estar seguro de que cualquier información descifrada nunca dejará tu dispositivo.
+
+<u>Cómo funciona:</u>
+
+Oversec monitoriza constantemente el texto en la pantalla. Cuando encuentra un texto encriptado, trata de descifrarlo y luego muestra el texto desencriptado superpuesto en lugar del texto encriptado. A la inversa, también puede leer el texto de un campo de entrada, encriptarlo y luego colocar el texto encriptado nuevamente en el campo de entrada.
+
+Para encriptar un texto, Oversec muestra un botón situado junto al campo de entrada activo. Si tocas el botón después de escribir tu mensaje secreto, Oversec lee el texto, lo encripta y coloca el texto encriptado en el campo. Ahora el mensaje está listo para enviarlo como de costumbre en la aplicación subyacente: ¡la aplicación no sabe que está enviando datos encriptados!
+
+Oversec también cuenta con una forma única para codificar los mensajes encriptados, ya que almacena el texto encriptado en caracteres invisibles (ancho cero)y permite al usuario agregar al final un mensaje señuelo. De esta forma, el mensaje solo mostrará, por ejemplo, «¡El sol brilla!» sin ningún signo visible de haber sido encriptado, mientras que en realidad contiene un mensaje encriptado oculto.
+
+También es posible encriptar y enviar fotos a través de Oversec: su exclusivo modo de cámara incluso te permite tomar y enviar una foto encriptada sin tener que guardar la foto original en el dispositivo.
+
+Oversec encripta tus datos ya sea utilizando claves simétricas (a través de ChaCha20 cipher + Poly1305 MAC) o mediante la encriptación PGP asimétrica (con la aplicación OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
+
+El código relacionado con la encriptación es abierto y puedes encontrarlo aquí: https://github.com/oversecio/oversec_crypto
+
+
+Esta aplicación utiliza servicios de accesibilidad.

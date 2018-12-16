@@ -1,0 +1,31 @@
+<b>O Oversec criptografa e descriptografa transparentemente qualquer texto em qualquer aplicativo</b>
+
+É possível usá-lo para trocar mensagens de bate-papo ou email privadas, criptografadas e ocultas ou armazenar suas notas criptografadas no seu telefone.
+
+Veja os nossos vídeos de demonstração:
+Introdução: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
+Criptografia de emails: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
+Criptografia de imagens: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+
+O Oversec é totalmente independente do aplicativo subjacente. Funciona com o Whatsapp™, Line™, Snapchat™, Instagram™ e todos os outros aplicativos de bate-papo. Também oferece suporte para o envio e recebimento de mensagens PGP criptografadas com o Gmail™  ou qualquer outro aplicativo de email.
+
+A criptografia de ponta a ponta é coisa do passado. O Oversec apresenta a tecnologia &quot;olho a olho&quot;. <b>Os dados criptografados são descriptografados somente quando são mostrados na tela!</b> O texto não criptografado nunca persiste e, portanto, não pode ser extraívo do sistema de arquivos nem armazenado em backup na nuvem acidentalmente.
+
+Além disso, projetamos o Oversec minuciosamente para que ele não precise de acesso à Internet. Por isso, você pode ter certeza de que nenhuma informação criptografada poderá sair do seu dispositivo.
+
+<u>Como funciona:</u>
+
+O Oversec monitora constantemente o texto na tela. Ao localizar texto criptografado, ele tenta descriptografá-lo e, em seguida, mostra o texto descriptografado como sobreposição, no lugar do texto criptografado. Ele também pode fazer o processo inverso, ou seja, ler o texto de um campo de entrada, criptografá-lo e colocar o texto criptografado no campo de entrada.
+
+Para criptografar um texto, o Oversec exibe um botão ao lado de campos de entrada ativos. Após a inserção do texto secreto, o toque nesse botão faz com que o Oversec leia o texto, criptografe-o e insira o texto criptografado no campo. Agora o texto está pronto para ser enviado normalmente no aplicativo subjacente - o aplicativo nem sabe que está enviando dados criptografados!
+
+O Oversec também oferece uma forma exclusiva de codificar as mensagens criptografadas. Ele armazena o texto criptografado em caracteres invisíveis (com largura zero) e permite adicionar texto de decoy no final. Dessa forma, a mensagem apresentada será algo como &quot;O sol está brilhando!&quot;, sem sinal visível de criptografia, quando, na verdade, contém uma mensagem criptografada oculta.
+
+Também é possível criptografar e enviar fotos pelo Oversec - com o modo de câmera exclusivo, você pode até tirar e enviar fotos criptografadas sem armazenar a foto original no dispositivo.
+
+O Oversec criptografa os dados usando chaves simétricas (com codificação ChaCha20 + Poly1305 MAC ) ou criptografia PGP assimétrica PGP (utilizando o aplicativo OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
+
+O código relacionado à criptografia é aberto e pode ser encontrado aqui: https://github.com/oversecio/oversec_crypto
+
+
+Este aplicativo usa serviços de Acessibilidade.

@@ -1,0 +1,27 @@
+<b>Oversec encrypte et décrypte  de maniere transparente tout texte dans toute application</b>
+
+Vous pouvez l'utiliser pour échanger des messages privés et secrètement chiffrés via Chat ou e-mail ainsi que stocker vos propres notes cryptées sur votre téléphone.
+
+Voir nos vidéos de démonstration
+Introduction: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
+Cryptage d'emails: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
+Cryptage d'images: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+
+Oversec est totalement indépendant de l'application sous-jacente, il fonctionne avec WhatsApp™, Line™, Snapchat™, Instagram™ ou toute autre application de chat. Il prend également en charge l'envoi et la réception de PGP crypté des messages avec Gmail™ ou toute autre application de messagerie.
+
+Nous avons également conçu soigneusement Oversec de sorte qu'il ne nécessite pas de connexion Internet. Grace a cela, vous pouvez être assuré qu'aucune information déchiffrage ne peut sortir de votre appareil.
+
+<u>Comment Oversec fonctionne-t-il:</u>
+
+Oversec surveille en permanence le texte sur votre écran. Quand il trouve un texte chiffré, il essaie de le décrypter, puis affiche le texte déchiffré en superposition, au dessus du texte chiffré. A l'inverse, il peut lire le texte à partir d'un champ de saisie, crypter, puis mettre le texte chiffré de nouveau dans le champ de saisie.
+
+Pour chiffrer un texte, Oversec place un bouton à côté d'un champ de saisie actif. Après avoir saisi le texte secret, en tapez sur ce bouton amene Oversec a lire le texte, le chiffrer et le mettre crypté de nouveau dans le champ. Il est maintenant prêt à être envoyé dans l'application sous-jacente, comme d'habitude - l'application ne sait même pas qu'il envoie des données cryptées!
+
+Oversec dispose également d'une façon unique de coder les messages chiffrés. Il stocke le texte crypté en caractères invisibles et ajoute du texte leurre à la fin. De cette façon, un message va juste montrer par exemple "Le soleil brille!" avec aucun signe visible d'un cryptage, alors qu'en réalité, il contient un message crypté caché.
+
+Oversec crypte vos données soit en utilisant des clés symétriques (en utilisant un chiffrement ChaCha20 + Poly1305 MAC) ou en utilisant le cryptage PGP asymétrique (via l'application OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
+
+Le code source concernant le chiffrement peut être trouvé ici: https://github.com/oversecio/oversec_crypto
+
+
+Cette application utilise les services d'accessibilité.

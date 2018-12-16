@@ -1,0 +1,32 @@
+<b>Oversec ermöglicht Verschlüsselung in jeder Android App</b>
+
+Mit Oversec kannst Du absolut privat und verschlüsselt chatten, verschlüsselte E-mails versenden oder eigene Notizen verschlüsseln. 
+
+Unsere Demo-Videos:
+Übersicht: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
+Emails: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
+Bilder: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+
+Oversec arbeitet mit jeder App, egal ob Whatsapp™, Line™, Snapchat™, Instagram™ oder jede andere Chat App. Mit Oversec kannst Du PGP-Verschlüsselte E-mails in GMail™ oder anderen Email Apps senden und empfangen.
+
+Ende-zu-Ende Verschlüsselung war gestern. Mit Oversec kommt die  "Auge-zu-Auge" Verschlüsselung. <b>Verschlüsselte Nachrichten werden nur entschlüsselt, solange sie auf dem Bildschirm angezeigt werden.</b> 
+Entschlüsselte Nachrichten werden niemals gespeichert und können so auch nicht versehentlich per Backup in der Cloud landen.
+
+Bitte beachte, dass Oversec KEINE Internet-Erlaubnis hat. Damit ist sichergestellt, dass alle Informationen, die es vom Bildschirm abliest, auf dem Gerät verbleiben.
+
+<u>Funktionsweise:</u>
+
+Oversec überwacht laufend alle Texte auf dem Bildschirm. Wenn ein verschlüsselter Text angezeigt wird, versucht Oversec, diesen zu entschlüsseln und zeigt dann den Klartext als Überlagerung über dem verschlüsselten Text an.
+Genauso liest Oversec Klartext aus einem Eingabefeld, verschlüsselt diesen und schreibt dann den verschlüsselten Text zurück in das Eingabefeld. Ein derartig verschlüsselter Text kann nun ganz normal in der darunterliegenden App versendet werden - die App bekommt überhaupt nicht mit, dass sie gerade verschlüsselten Text versendet.
+ 
+Oversec bietet aber nicht nur normale Verschlüsselung, sondern kann den verschlüsselten Text in Tarn-Nachrichten verbergen. Dafür legt es den verschlüsselten Text in unsichtbaren Zeichen ab und hängt an diese dann einen Tarn-Text an. Dadurch sehen mit Oversec verschlüsselte Nachrichten ganz unverfänglich aus, man kann nicht erkennen, dass sich in ihnen ein verschlüsselter, privater Text verbirgt.
+
+Oversec erlaubt außerdem auch das Ver- und Entschlüsseln von Photos und Bildern. Man kann mit Oversec sogar ultra sichere Photos aufnehmen, denn mit Oversec wird das unverschlüsselte Bild nicht gespeichert, sondern sofort von der Kamera verschlüsselt.
+
+Für die Verschlüsselung verwendet Oversec entweder ein Verfahren mit symmetrischen (gemeinsamen) Schlüsseln ( ChaCha20  + Poly1305  ) oder asymmetrische PGP Verschlüsselung mit öffentlichen und privaten Schlüsseln. (Hierzu wird die OpenKeychain App verwendet: https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain).
+
+Der Sourcecode für die Ver- und Entschlüsselung ist als OpenSource und kann hier eingesehen werden:
+
+https://github.com/oversecio/oversec_crypto
+
+Diese App verwendet Accessibility-Dienste.
