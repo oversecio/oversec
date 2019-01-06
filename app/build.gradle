@@ -53,13 +53,11 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
 
-        def xVersionCode =  androidGitVersion.code()
-        try {xVersionCode = fdroidVersionCode } catch (e) {}
-        versionCode xVersionCode
-
-        def xVersionName =  androidGitVersion.name()
-        try {xVersionName = fdroidVersionName } catch (e) {}
-        versionName xVersionName
+        //don't touch version info in manifest (gets placed there during f-droid build)
+        if (!"true".equals(fdroidVersionOverride)) {
+            versionCode =  androidGitVersion.code()
+            versionName =  androidGitVersion.name()
+        }
     }
 
     buildTypes {
