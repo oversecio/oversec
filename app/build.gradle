@@ -1,7 +1,11 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.gladed.androidgitversion'
 apply plugin: 'witness'
-
+def hasFdroidVersionOverride=false
+try { 
+    apply from: "fdroidVersionCode.gradle" 
+    hasFdroidVersionOverride=true
+} catch (ex) {}
 
 def rpx = project.rootProject.ext
 
@@ -53,13 +57,12 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
 
-        def xVersionCode =  androidGitVersion.code()
-        try {xVersionCode = fdroidVersionCode } catch (e) {}
-        versionCode xVersionCode
-
-        def xVersionName =  androidGitVersion.name()
-        try {xVersionName = fdroidVersionName } catch (e) {}
-        versionName xVersionName
+        versionCode =  androidGitVersion.code()
+        versionName =  androidGitVersion.name()
+        if (hasFdroidVersionOverride) {
+            versionName =  fdroidVersionName 
+            versionCode =  fdroidVersionCode 
+        }
     }
 
     buildTypes {
