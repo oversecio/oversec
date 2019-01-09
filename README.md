@@ -4,8 +4,12 @@ Oversec is a unique app for Android that adds secure text and image-encryption t
 
 ### More infos on our [website](http://oversec.io)
 
-### Download the app from the [Playstore](https://play.google.com/store/apps/details?id=io.oversec.one)
-
+[<img src="https://f-droid.org/badge/get-it-on.png"
+     alt="Get it on F-Droid"
+     height="80">](https://f-droid.org/packages/io.oversec.one/)
+[<img src="https://play.google.com/intl/en_us/badges/images/generic/en-play-badge.png"
+     alt="Get it on Google Play"
+     height="80">](https://play.google.com/store/apps/details?id=io.oversec.one)
 
 <a href="http://www.youtube.com/watch?feature=player_embedded&v=VHZ9dA5ELXE
 " target="_blank">
