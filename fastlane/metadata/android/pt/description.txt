@@ -3,9 +3,9 @@
 É possível usá-lo para trocar mensagens de bate-papo ou email privadas, criptografadas e ocultas ou armazenar suas notas criptografadas no seu telefone.
 
 Veja os nossos vídeos de demonstração:
-Introdução: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
-Criptografia de emails: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
-Criptografia de imagens: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+* <a href="https://www.youtube.com/watch?v=VHZ9dA5ELXE">Introdução</a>
+* <a href="https://www.youtube.com/watch?v=jZ_-5X2tiAo">Criptografia de emails</a>
+* <a href="https://www.youtube.com/watch?v=laq7SGwiuAw">Criptografia de imagens</a>
 
 O Oversec é totalmente independente do aplicativo subjacente. Funciona com o Whatsapp™, Line™, Snapchat™, Instagram™ e todos os outros aplicativos de bate-papo. Também oferece suporte para o envio e recebimento de mensagens PGP criptografadas com o Gmail™  ou qualquer outro aplicativo de email.
 
