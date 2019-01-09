@@ -3,9 +3,9 @@
 Oversec uygulamasýný özel, ŷifreli chat ve email mesajlaŷmasý için veya telefonunuzda özel ŷifreli notlar tutmak için kullanabilirsiniz.
 
 Demo videolarýmýzý izleyin:
-Tanýtým: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
-Emailleri ŷifreleme: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
-Resimleri ŷifreleme: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+* <a href="https://www.youtube.com/watch?v=VHZ9dA5ELXE">Tanýtým</a>
+* <a href="https://www.youtube.com/watch?v=jZ_-5X2tiAo">Emailleri ŷifreleme</a>
+* <a href="https://www.youtube.com/watch?v=laq7SGwiuAw">Resimleri ŷifreleme</a>
 
 Oversec ana uygulamayý sorgulamadan çalýŷýr, Oversec uygulamasý Whatsapp™, Line™, Snapchat™, Instagram™ ve diŵer uygulamalarla uyumlu çalýŷabilir. Oversec ayný zamanda Gmail veya diŵer Elektronik Posta uygulamalarý aracýlýŵýyla PGP ile ŷifrelenmiŷ mesajlar göndermenizi ve almanýzý destekler.
 
