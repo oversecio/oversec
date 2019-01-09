@@ -25,6 +25,6 @@ You may also encrypt and send photos through Oversec - its unique camera mode ev
 
 Oversec encrypts your data either using symmetric keys (using ChaCha20 cipher + Poly1305 MAC ) or using asymmetric PGP encryption (making use of the <a href="https://f-droid.org/packages/org.sufficientlysecure.keychain/">OpenKeychain</a> app).
 
-The encryption related code is open source and can be found <a href="https://github.com/oversecio/oversec_crypto">here</a>.
+The code is open source and can be found <a href="https://github.com/oversecio/oversec">here</a>.
 
 This app uses Accessibility services.
