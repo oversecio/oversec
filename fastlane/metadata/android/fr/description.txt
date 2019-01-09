@@ -21,7 +21,7 @@ Oversec dispose également d'une façon unique de coder les messages chiffrés. 
 
 Oversec crypte vos données soit en utilisant des clés symétriques (en utilisant un chiffrement ChaCha20 + Poly1305 MAC) ou en utilisant le cryptage PGP asymétrique (via l'application OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
 
-Le code source concernant le chiffrement peut être trouvé ici: https://github.com/oversecio/oversec_crypto
+Le code source peut être trouvé ici: https://github.com/oversecio/oversec
 
 
 Cette application utilise les services d'accessibilité.
