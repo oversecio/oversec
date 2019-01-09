@@ -3,9 +3,9 @@
 Вы можете использовать его для обмена частными зашифрованными и скрытыми чатами или сообщениями электронной почты или для хранения собственных зашифрованных заметок на вашем телефоне.
 
 Смотрите наши демо-видео:
-Введение: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
-Шифрование сообщений электронной почты: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
-Шифрование изображений: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+* <a href="https://www.youtube.com/watch?v=VHZ9dA5ELXE">Введение</a>
+* <a href="https://www.youtube.com/watch?v=jZ_-5X2tiAo">Шифрование сообщений электронной почты</a>
+* <a href="https://www.youtube.com/watch?v=laq7SGwiuAw">Шифрование изображений</a>
 
 Oversec полный агностик относительно нижележащего приложения, оно работает с Whatsapp™, Line™, Snapchat™, Instagram™ или любым другим приложением чата. Оно также поддерживает отправку и прием сообщений, зашифрованных PGP в Gmail ™ или любом другом приложении электронной почты.
 
