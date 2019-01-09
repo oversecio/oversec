@@ -3,9 +3,9 @@
 Vous pouvez l'utiliser pour échanger des messages privés et secrètement chiffrés via Chat ou e-mail ainsi que stocker vos propres notes cryptées sur votre téléphone.
 
 Voir nos vidéos de démonstration
-Introduction: [https://www.google.com/url?q=https://www.youtube.com/watch?v=VHZ9dA5ELXE]
-Cryptage d'emails: [https://www.google.com/url?q=https://www.youtube.com/watch?v=jZ_-5X2tiAo]
-Cryptage d'images: [https://www.google.com/url?q=https://www.youtube.com/watch?v=laq7SGwiuAw]
+* <a href="https://www.youtube.com/watch?v=VHZ9dA5ELXE">Introduction</a>
+* <a href="https://www.youtube.com/watch?v=jZ_-5X2tiAo">Cryptage d'emails</a>
+* <a href="https://www.youtube.com/watch?v=laq7SGwiuAw">Cryptage d'images</a>
 
 Oversec est totalement indépendant de l'application sous-jacente, il fonctionne avec WhatsApp™, Line™, Snapchat™, Instagram™ ou toute autre application de chat. Il prend également en charge l'envoi et la réception de PGP crypté des messages avec Gmail™ ou toute autre application de messagerie.
 
