@@ -26,7 +26,7 @@ También es posible encriptar y enviar fotos a través de Oversec: su exclusivo 
 
 Oversec encripta tus datos ya sea utilizando claves simétricas (a través de ChaCha20 cipher + Poly1305 MAC) o mediante la encriptación PGP asimétrica (con la aplicación OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
 
-El código relacionado con la encriptación es abierto y puedes encontrarlo aquí: https://github.com/oversecio/oversec_crypto
+El código es abierto y puedes encontrarlo aquí: https://github.com/oversecio/oversec
 
 
 Esta aplicación utiliza servicios de accesibilidad.
