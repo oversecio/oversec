@@ -25,7 +25,7 @@ Oversec erlaubt außerdem auch das Ver- und Entschlüsseln von Photos und Bilder
 
 Für die Verschlüsselung verwendet Oversec entweder ein Verfahren mit symmetrischen (gemeinsamen) Schlüsseln ( ChaCha20  + Poly1305  ) oder asymmetrische PGP Verschlüsselung mit öffentlichen und privaten Schlüsseln. (Hierzu wird die OpenKeychain App verwendet: https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain).
 
-Der Sourcecode OpenSource und kann hier eingesehen werden:
+Der Sourcecode ist OpenSource und kann hier eingesehen werden:
 
 https://github.com/oversecio/oversec
 
