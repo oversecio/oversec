@@ -829,6 +829,8 @@ public class OversecAccessibilityService extends AccessibilityService implements
             if (rootNode != null) {
 
                 //fail-fast if this is not a package we're interested in
+                CharSequence csPackageName = rootNode.getPackageName();
+                if (csPackageName==null) return;
                 String aPackageName = rootNode.getPackageName().toString();
                 boolean ours = mCore.getDb().isShowDecryptOverlay(aPackageName);
                 if (!ours) {
