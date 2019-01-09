@@ -25,7 +25,7 @@ Oversec также имеет уникальный способ кодирова
 
 Oversec шифрует данные, используя либо симметричные ключи (используя шифр ChaCha20 + Poly1305 MAC) или с помощью асимметричного шифрования PGP (с использованием приложения OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
 
-Код, связанный с шифрованием - с открытыми исходниками, он размещён здесь: https://github.com/oversecio/oversec_crypto
+Код он размещён здесь: https://github.com/oversecio/oversec
 
 
 Это приложение использует службы доступности.
