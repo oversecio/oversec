@@ -25,7 +25,7 @@ Também é possível criptografar e enviar fotos pelo Oversec - com o modo de c�
 
 O Oversec criptografa os dados usando chaves simétricas (com codificação ChaCha20 + Poly1305 MAC ) ou criptografia PGP assimétrica PGP (utilizando o aplicativo OpenKeychain [https://www.google.com/url?q=https://play.google.com/store/apps/details?id=org.sufficientlysecure.keychain]).
 
-O código relacionado à criptografia é aberto e pode ser encontrado aqui: https://github.com/oversecio/oversec_crypto
+O código é aberto e pode ser encontrado aqui: https://github.com/oversecio/oversec
 
 
 Este aplicativo usa serviços de Acessibilidade.
