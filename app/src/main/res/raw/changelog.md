@@ -1,3 +1,15 @@
+### 1.5.7
+- added chinese traditional translation (thanks to @linsui)
+- fixed OpenKeychain link in setup page 
+- fixed various user reports crashes
+- enabled all features in F-Droid version
+
+### 1.5.6
+- fixed some minor issues
+
+### 1.5.6
+- fixed some minor issues
+
 ### 1.5.4
 - released on f-droid
 
