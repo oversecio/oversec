@@ -528,6 +528,10 @@ public class OversecAccessibilityService extends AccessibilityService implements
         } catch (SecurityException ex) {
             //this usually happens when switching users, so no case of concern
             Ln.w(ex);
+        } catch (IllegalStateException ex) {
+            //this is to catch "java.lang.IllegalStateException: Cannot perform this action on a sealed instance."
+            //not yet sure what the root cause is, but it needs to be catched here either way
+            Ln.w(ex);
         }
     }
 
