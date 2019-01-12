@@ -564,7 +564,7 @@ public class OversecAccessibilityService extends AccessibilityService implements
             int n = mScrapeSubtreeBag.size();
             for (int i = 0; i < n; i++) {
                 NodeAndFlag item = mScrapeSubtreeBag.get(i);
-                if (item.nodeHash == nf.nodeHash) {
+                if (item!=null && item.nodeHash == nf.nodeHash) {
                     item.cancelled = true;
                 }
             }
