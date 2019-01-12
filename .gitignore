@@ -1,4 +1,5 @@
 proguardMappings
+app/fdroidVersionCode.gradle
 app/src/oversec
 app/src/whatsapp
 app/src/intern
