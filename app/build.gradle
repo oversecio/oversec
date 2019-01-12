@@ -1,10 +1,10 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.gladed.androidgitversion'
 apply plugin: 'witness'
-def hasFdroidVersionOverride=false
-try { 
-    apply from: "fdroidVersionCode.gradle" 
-    hasFdroidVersionOverride=true
+def isFdroidBuild=false
+try {
+    apply from: "fdroidVersionCode.gradle"
+    isFdroidBuild=true
 } catch (ex) {}
 
 def rpx = project.rootProject.ext
@@ -59,10 +59,11 @@ android {
 
         versionCode =  androidGitVersion.code()
         versionName =  androidGitVersion.name()
-        if (hasFdroidVersionOverride) {
+        if (isFdroidBuild) {
             versionName =  fdroidVersionName 
             versionCode =  fdroidVersionCode 
         }
+        buildConfigField "java.lang.Boolean", "IS_FRDOID", "new Boolean("+isFdroidBuild+")"
     }
 
     buildTypes {

@@ -528,6 +528,10 @@ public class OversecAccessibilityService extends AccessibilityService implements
         } catch (SecurityException ex) {
             //this usually happens when switching users, so no case of concern
             Ln.w(ex);
+        } catch (IllegalStateException ex) {
+            //this is to catch "java.lang.IllegalStateException: Cannot perform this action on a sealed instance."
+            //not yet sure what the root cause is, but it needs to be catched here either way
+            Ln.w(ex);
         }
     }
 
@@ -564,7 +568,7 @@ public class OversecAccessibilityService extends AccessibilityService implements
             int n = mScrapeSubtreeBag.size();
             for (int i = 0; i < n; i++) {
                 NodeAndFlag item = mScrapeSubtreeBag.get(i);
-                if (item.nodeHash == nf.nodeHash) {
+                if (item!=null && item.nodeHash == nf.nodeHash) {
                     item.cancelled = true;
                 }
             }

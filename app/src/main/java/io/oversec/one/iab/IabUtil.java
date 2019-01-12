@@ -108,9 +108,7 @@ public class IabUtil extends BroadcastReceiver implements IabHelper.OnIabSetupFi
     }
 
     public boolean isIabAvailable() {
-
-        boolean a = isGooglePlayInstalled(mCtx);
-        return a && mIabSetupResult != null && mIabSetupResult.isSuccess();
+        return isGooglePlayInstalled(mCtx) && !BuildConfig.IS_FRDOID && mIabSetupResult != null && mIabSetupResult.isSuccess();
     }
 
     public synchronized void addListener(FullVersionListener v) {
