@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+<!--
+    <string name="share_body">&appname;:\nSend secret messages with &targetapp;.\n\n&dllink;</string>
+
+    <string name="title_activity_encryption_params">&appname;</string>
+    <string name="decrypt_error_user_interaction_required">Password required</string>
+    <string name="decrypt_error_user_interaction_required__long">Password required to decrypt!</string>
+    <string name="iab_body">Upgrading supports ongoing development and enables those additional features:\n\n* Customize colors\n* Custom decoy content\n* Unlimited passwords</string>
+    <string name="tooltip_hidebutton_nothidden">Tap this button to temporarily hide the &appname; overlay.\n\nLong-Tap to completely exit &appname; and clear all remembered passwords. (Panic-Button!)</string>
+-->
+</resources>
