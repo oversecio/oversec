@@ -14,7 +14,7 @@ rpx.APPTGTS.put("oversec",[applicationId: "io.oversec.one", app_name: "Oversec",
 rpx.APPTGTS.put("intern",[applicationId: "io.oversec.one", app_name: "INTERN", acs_label: "INTERN", targetapp: "", website: "https://intern.oversec.io", dllink: "http://dl-intern.oversec.io"])
 
 
-rpx.langs = ["","-de","-es","-fr","-pt","-ru","-tr","-zh-rCN","-it"]
+rpx.langs = ["","-de","-es","-fr","-pt","-ru","-tr","zh-rCN"]
 
 rpx.applyAppTgt = { scope, appTgt ->
     scope.applicationId rpx.APPTGTS[appTgt].applicationId
