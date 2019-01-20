@@ -1,3 +1,8 @@
+### 1.5.8
+- added italian translation (thanks to @unbranched)
+- fixed an issue with chinese translation
+- fixed remaining user reports crashes
+
 ### 1.5.7
 - added chinese traditional translation (thanks to @linsui)
 - fixed OpenKeychain link in setup page 
