@@ -1,6 +1,7 @@
 ### 1.5.8
 - added italian translation (thanks to @unbranched)
 - fixed an issue with chinese translation
+- added a sort option for apps
 - fixed remaining user reports crashes
 
 ### 1.5.7
