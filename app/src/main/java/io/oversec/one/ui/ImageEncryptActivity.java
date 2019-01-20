@@ -119,6 +119,13 @@ public class ImageEncryptActivity extends BaseActivity {
                 });
             }
             return;
+        } catch (Exception e) {
+            showError(e.getLocalizedMessage(), new Runnable() {
+                @Override
+                public void run() {
+                    finish();
+                }
+            });
         }
 
 

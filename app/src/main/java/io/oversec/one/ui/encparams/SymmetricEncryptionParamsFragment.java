@@ -40,6 +40,7 @@ import roboguice.util.Ln;
 
 import java.util.ArrayList;
 import java.util.List;
+import java.util.ListIterator;
 
 public class SymmetricEncryptionParamsFragment extends AbstractEncryptionParamsFragment implements OversecKeystore2.KeyStoreListener {
     private static final String EXTRA_PADDER_POS = "EXTRA_PADDER_POS";
@@ -293,6 +294,15 @@ public class SymmetricEncryptionParamsFragment extends AbstractEncryptionParamsF
 
         OversecKeystore2 aKeystore = OversecKeystore2.Companion.getInstance(getMView().getContext());
         List<SymmetricKeyEncrypted> keys = new ArrayList<>(aKeystore.getEncryptedKeys_sorted());
+
+        //This is really puzzling. A null value for k has been reported in the wild, but so far no idea how this could possibly happen.
+        //filtering out null values or now...
+        ListIterator<SymmetricKeyEncrypted> iter = keys.listIterator();
+        while (iter.hasNext()) {
+            if (iter.next()==null) {
+                iter.remove();
+            }
+        }
 
         if (selectedKeys != null) {
             for (Long id : selectedKeys) {
