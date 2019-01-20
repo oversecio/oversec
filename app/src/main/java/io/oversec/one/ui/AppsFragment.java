@@ -18,6 +18,7 @@ import android.widget.CheckBox;
 import android.widget.CompoundButton;
 import android.widget.ImageButton;
 import android.widget.ImageView;
+import android.widget.RadioButton;
 import android.widget.TextView;
 
 import io.oversec.one.Core;
@@ -46,6 +47,8 @@ public class AppsFragment extends Fragment implements WithHelp, AppsReceiver.IAp
     private PackageManager mPackageManager;
     private LinearLayoutManager mLayoutManager;
     private boolean mPackageChangeReceiverRegistered;
+    private RadioButton mRbSortChecked,mRbSortName;
+    private CompoundButton.OnCheckedChangeListener mRbSortCheckedChangeListener;
 
     public void reload(int pos) {
         mAdapter.notifyItemChanged(pos);
@@ -55,17 +58,39 @@ public class AppsFragment extends Fragment implements WithHelp, AppsReceiver.IAp
         //TODO: When reloading after app config activity should restore current scroll positionm or only refresh item/view for that app
 
         mPackages = getPackages();
-        Collections.sort(mPackages, new Comparator<ApplicationInfo>() {
-
-            @Override
-            public int compare(ApplicationInfo lhs, ApplicationInfo rhs) {
-                String s1 = mPackageManager.getApplicationLabel(lhs).toString();
-                String s2 = mPackageManager.getApplicationLabel(rhs).toString();
-                return s1.compareTo(s2);
-            }
-        });
+        applySort();
         mAdapter = new MyAdapter();
         mListView.setAdapter(mAdapter);
+
+    }
+
+    private void applySort() {
+
+        if (mRbSortName.isChecked()) {
+            Collections.sort(mPackages, new ApplicationInfo.DisplayNameComparator(mPackageManager));
+        }
+        else {
+            Collections.sort(mPackages, new Comparator<ApplicationInfo>() {
+                @Override
+                public int compare(ApplicationInfo o1, ApplicationInfo o2) {
+                    boolean r1 = mDb.isAppEnabled(o1.packageName);
+                    boolean r2 = mDb.isAppEnabled(o2.packageName);
+                    int r = Boolean.compare(r2,r1);
+                    if (r==0) {
+                        CharSequence  s1 = mPackageManager.getApplicationLabel(o1);
+                        if (s1 == null) {
+                            s1 = o1.packageName;
+                        }
+                        CharSequence  s2 = mPackageManager.getApplicationLabel(o2);
+                        if (s2 == null) {
+                            s2 = o2.packageName;
+                        }
+                        r = String.valueOf(s1).compareTo(String.valueOf(s2));
+                    }
+                    return r;
+                }
+            });
+        }
 
     }
 
@@ -211,6 +236,18 @@ public class AppsFragment extends Fragment implements WithHelp, AppsReceiver.IAp
         mLayoutManager = new LinearLayoutManager(getActivity());
         mListView.setLayoutManager(mLayoutManager);
 
+        mRbSortCheckedChangeListener = new CompoundButton.OnCheckedChangeListener() {
+            @Override
+            public void onCheckedChanged(CompoundButton buttonView, boolean isChecked) {
+                applySort();
+                mAdapter.notifyDataSetChanged();
+            }
+        };
+
+        mRbSortChecked = ((RadioButton) view.findViewById(R.id.rbChecked));
+        mRbSortName = ((RadioButton) view.findViewById(R.id.rbName));
+        mRbSortChecked.setOnCheckedChangeListener(mRbSortCheckedChangeListener);
+        mRbSortName.setOnCheckedChangeListener(mRbSortCheckedChangeListener);
 
         reload();
         AppsReceiver.Companion.addListener(this);
@@ -238,6 +275,7 @@ public class AppsFragment extends Fragment implements WithHelp, AppsReceiver.IAp
         }
         mAdapter.notifyDataSetChanged();
     }
+
 
 
     private List<ApplicationInfo> getPackages() {

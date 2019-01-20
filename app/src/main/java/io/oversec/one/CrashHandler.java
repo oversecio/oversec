@@ -5,8 +5,10 @@ import android.app.PendingIntent;
 import android.content.Context;
 import android.content.Intent;
 
+import java.io.BufferedReader;
 import java.io.File;
 import java.io.IOException;
+import java.io.InputStreamReader;
 import java.io.PrintWriter;
 import java.io.StringWriter;
 import java.io.Writer;
@@ -24,12 +26,13 @@ public class CrashHandler {
                 ex.printStackTrace();
 
                 String stackTrace = buildStackTrace(ex);
+                String logcat = grabLogcat();
 
                 if (!hasFlagFile(app.getApplicationContext())) {
 
                     AlarmManager am = (AlarmManager) app.getSystemService(Context.ALARM_SERVICE);
 
-                    Intent intent = CrashActivity.buildIntent(app, thread.getName(), stackTrace);
+                    Intent intent = CrashActivity.buildIntent(app, thread.getName(), stackTrace+"\nLOGCAT:\n"+logcat);
                     PendingIntent pi = PendingIntent.getActivity(app, 0, intent, 0);
 
                     //TODO: maybe write some counter value to disk and prevent an endless loop ??
@@ -85,5 +88,24 @@ public class CrashHandler {
         final PrintWriter printWriter = new PrintWriter(result);
         ex.printStackTrace(printWriter);
         return result.toString();
+    }
+
+    private static String grabLogcat() {
+        try {
+            Process process = Runtime.getRuntime().exec("logcat -d");
+            BufferedReader bufferedReader = new BufferedReader(new InputStreamReader(process.getInputStream()));
+
+            StringBuilder log = new StringBuilder();
+            String line;
+            while ((line = bufferedReader.readLine()) != null) {
+                log.append(line);
+                log.append("\n");
+            }
+
+            return log.toString();
+
+        } catch (IOException e) {
+            return null;
+        }
     }
 }
