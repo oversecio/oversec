@@ -744,7 +744,8 @@ public class Tree {
 
         public CharSequence getFirstEncodedChildText() {
             if (sealed) {
-                throw new IllegalArgumentException("sealed! " + super.toString());
+                Ln.w("getFirstEncodedChildText : SEALED!");
+                return null;
             }
             try {
                 for (TreeNode cn : mChildren) {
