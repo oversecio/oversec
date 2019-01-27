@@ -57,7 +57,7 @@ public class ImageEncryptActivity extends BaseActivity {
     private String mActivityName;
     private Uri mImageUri;
     private boolean mFromCore;
-    private static int mSampleSizeS = 16; //static: We keep the last successfull sample size, assuming that images do always have the same resolution
+    private static int mSampleSizeS = 4; //static: We keep the last successfull sample size, assuming that images do always have the same resolution
 
     public static void show(Activity ctx, String packagename, Uri uri) {
         Intent i = new Intent();
@@ -70,7 +70,7 @@ public class ImageEncryptActivity extends BaseActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        mCoder = new BlackAndWhiteImageXCoder(this);
+        mCoder = new BlackAndWhiteImageXCoder(this, 2);
         init(getIntent(), savedInstanceState == null);
         if (mPackageName == null) {
             //need to ask user first where to send it
