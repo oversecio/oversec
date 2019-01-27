@@ -1,3 +1,6 @@
+### 1.5.10
+- fixed image encoding
+
 ### 1.5.9
 - fixed a huge problem where the key database could get corrupted and thus render Oversec completely unusable until re-install
 - fixed some more user reported crashes
