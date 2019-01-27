@@ -140,6 +140,7 @@
                 android:launchMode="singleInstance"
                 android:taskAffinity="io.oversec.one.ImageEncrypt"
                >
+            <!--
             <intent-filter tools:ignore="AppLinkUrlError,GoogleAppIndexingWarning">
                 <action android:name="android.intent.action.VIEW"/>
 
@@ -154,6 +155,7 @@
 
                 <data android:mimeType="image/*"/>
             </intent-filter>
+            -->
         </activity>
         <activity
                 android:enabled="@bool/feature_images"

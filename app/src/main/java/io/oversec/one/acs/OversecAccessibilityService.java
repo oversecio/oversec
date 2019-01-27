@@ -418,7 +418,7 @@ public class OversecAccessibilityService extends AccessibilityService implements
                 }
 
             } else if (mCore.getDb().isAppEnabled(packageName)
-                    ) {
+            ) {
 
                 if (type == AccessibilityEvent.TYPE_VIEW_LONG_CLICKED || type == AccessibilityEvent.TYPE_VIEW_CLICKED) {
                     AccessibilityNodeInfo n = arg0.getSource();
@@ -438,7 +438,7 @@ public class OversecAccessibilityService extends AccessibilityService implements
                             if (type == AccessibilityEvent.TYPE_VIEW_CLICKED && mDb.isShowInfoOnTap(packageName)
                                     ||
                                     type == AccessibilityEvent.TYPE_VIEW_LONG_CLICKED && mDb.isShowInfoOnLongTap(packageName)
-                                    ) {
+                            ) {
 
                                 CharSequence enc = AccessibilityNodeInfoUtils.getNodeText(n);
                                 if (!mTree.isATextView(n)) {
@@ -568,7 +568,7 @@ public class OversecAccessibilityService extends AccessibilityService implements
             int n = mScrapeSubtreeBag.size();
             for (int i = 0; i < n; i++) {
                 NodeAndFlag item = mScrapeSubtreeBag.get(i);
-                if (item!=null && item.nodeHash == nf.nodeHash) {
+                if (item != null && item.nodeHash == nf.nodeHash) {
                     item.cancelled = true;
                 }
             }
@@ -665,28 +665,32 @@ public class OversecAccessibilityService extends AccessibilityService implements
     private void scrapeSubtree_MAIN(AccessibilityNodeInfo node, String reason, PerformNodeAction nodeAction) {
         checkHandlerThread();
 
-        if (LoggingConfig.INSTANCE.getLOG()) {
-            Ln.d("SKRAPE: scrapeSubtree node=%s  reason=%s", node.hashCode(), reason);
+        try {
+            if (LoggingConfig.INSTANCE.getLOG()) {
+                Ln.d("SKRAPE: scrapeSubtree node=%s  reason=%s", node.hashCode(), reason);
+            }
+            long t1 = System.currentTimeMillis();
+
+            node.refresh();
+            checkFocusedNode_PreLollipop(node);
+
+
+            Tree.TreeNode treeNode = mTree.get(node);
+            if (treeNode != null) {
+                mTree.removeSubtree(treeNode);
+
+            } else {
+                treeNode = mTree.put(node);
+
+            }
+            scrapeCompleteSubtree_MAIN(treeNode, node, nodeAction);
+
+
+            long t2 = System.currentTimeMillis();
+            Ln.d("SKRAPE scrapeSubtree took %s", (t2 - t1));
+        } catch (Exception ex) {
+            Ln.e(ex);
         }
-        long t1 = System.currentTimeMillis();
-
-        node.refresh();
-        checkFocusedNode_PreLollipop(node);
-
-
-        Tree.TreeNode treeNode = mTree.get(node);
-        if (treeNode != null) {
-            mTree.removeSubtree(treeNode);
-
-        } else {
-            treeNode = mTree.put(node);
-
-        }
-        scrapeCompleteSubtree_MAIN(treeNode, node, nodeAction);
-
-
-        long t2 = System.currentTimeMillis();
-        Ln.d("SKRAPE scrapeSubtree took %s", (t2 - t1));
 
     }
 
@@ -834,7 +838,7 @@ public class OversecAccessibilityService extends AccessibilityService implements
 
                 //fail-fast if this is not a package we're interested in
                 CharSequence csPackageName = rootNode.getPackageName();
-                if (csPackageName==null) return;
+                if (csPackageName == null) return;
                 String aPackageName = rootNode.getPackageName().toString();
                 boolean ours = mCore.getDb().isShowDecryptOverlay(aPackageName);
                 if (!ours) {
