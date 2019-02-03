@@ -52,7 +52,7 @@ android {
         minSdkVersion 21
         targetSdkVersion 28
 
-        //hardcoded for F-droid bot
+//hardcoded for F-droid bot
         versionCode = 1005010
         versionName = "1.5.10"
 
@@ -63,6 +63,7 @@ android {
         }
 
         buildConfigField "java.lang.Boolean", "IS_FRDOID", "new Boolean("+project.hasProperty("fdroid")+")"
+
     }
 
     buildTypes {
