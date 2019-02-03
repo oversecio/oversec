@@ -1,11 +1,6 @@
 apply plugin: 'com.android.application'
 apply plugin: 'com.gladed.androidgitversion'
 apply plugin: 'witness'
-def isFdroidBuild=false
-try {
-    apply from: "fdroidVersionCode.gradle"
-    isFdroidBuild=true
-} catch (ex) {}
 
 def rpx = project.rootProject.ext
 
@@ -56,8 +51,8 @@ android {
         applicationId "io.oversec.one"
         minSdkVersion 21
         targetSdkVersion 28
-        
-        //hardcoded for F-droid bot
+
+//hardcoded for F-droid bot
         versionCode = 1005010
         versionName = "1.5.10"
 
@@ -67,11 +62,8 @@ android {
             throw new Exception(String.format("Version Code Mismatch, %d <-> %d\nPlease update hardcoded versionCode/versionName",versionCode,versionCodeFromGit))
         }
 
-//        if (isFdroidBuild) {
-//            versionName =  fdroidVersionName
-//            versionCode =  fdroidVersionCode
-//        }
-        buildConfigField "java.lang.Boolean", "IS_FRDOID", "new Boolean("+isFdroidBuild+")"
+        buildConfigField "java.lang.Boolean", "IS_FRDOID", "new Boolean("+project.hasProperty("fdroid")+")"
+
     }
 
     buildTypes {
