@@ -53,8 +53,8 @@ android {
         targetSdkVersion 28
 
         //hardcoded for F-droid bot
-        versionCode = 1005010
-        versionName = "1.5.10"
+        versionCode = 1005011
+        versionName = "1.5.11"
 
         //still need to make sure this is in sync with the git tags
         def versionCodeFromGit =  androidGitVersion.code()

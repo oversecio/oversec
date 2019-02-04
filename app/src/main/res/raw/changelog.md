@@ -1,3 +1,6 @@
+### 1.5.11
+- restore all functionality. which was lost due to a broken build job on F-Droid for 1.5.10 
+
 ### 1.5.10
 - fixed image encoding
 - some corrections to chinese translation
