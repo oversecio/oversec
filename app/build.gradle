@@ -63,6 +63,7 @@ android {
         }
 
         buildConfigField "java.lang.Boolean", "IS_FRDOID", "new Boolean("+project.hasProperty("fdroid")+")"
+
     }
 
     buildTypes {
