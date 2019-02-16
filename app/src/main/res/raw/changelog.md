@@ -1,3 +1,10 @@
+### 1.5.13
+- fixed a spurious crash when importing keys
+
+### 1.5.12
+- bugfix: decoy entries can now be deleted 
+
+
 ### 1.5.11
 - restore all functionality. which was lost due to a broken build job on F-Droid for 1.5.10 
 

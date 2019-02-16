@@ -150,7 +150,7 @@ public class PadderDetailActivity extends AppCompatActivity {
                     runOnUiThread(new Runnable() {
                         @Override
                         public void run() {
-                          delete();
+                           delete();
                         }
                     });
 
