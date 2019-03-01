@@ -541,7 +541,9 @@ public class Core extends CoreContract implements Handler.Callback {
         showOrUpdateNotification_UI();
 
         if (!hide) {
-            mOversecAccessibilityService.sendScrapeAllMessage("doTemporaryHide_UI", null);
+            if (mOversecAccessibilityService!=null) {
+                mOversecAccessibilityService.sendScrapeAllMessage("doTemporaryHide_UI", null);
+            }
         } else {
             mOverlays.refreshDecrypt(null);
             mEncryptionCache.clear(EncryptionCache.CLEAR_REASON.OVERSEC_HIDDEN, null);
