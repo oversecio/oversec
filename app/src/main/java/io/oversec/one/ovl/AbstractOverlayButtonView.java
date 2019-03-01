@@ -139,7 +139,6 @@ public abstract class AbstractOverlayButtonView extends AbstractOverlayTouchable
     public boolean onTouchHandleMove(
             MotionEvent event) {
 
-
         int totalDeltaX = touchInfo.lastX - touchInfo.firstX;
         int totalDeltaY = touchInfo.lastY - touchInfo.firstY;
 
@@ -156,7 +155,6 @@ public abstract class AbstractOverlayButtonView extends AbstractOverlayTouchable
                 break;
             case MotionEvent.ACTION_MOVE:
 
-
                 int deltaX = (int) event.getRawX() - touchInfo.lastX;
                 int deltaY = (int) event.getRawY() - touchInfo.lastY;
 
@@ -169,6 +167,10 @@ public abstract class AbstractOverlayButtonView extends AbstractOverlayTouchable
                     touchInfo.moving = true;
                     mHandler.removeMessages(WHAT_LONG_TAP);
                     mHandler.removeMessages(WHAT_SINGLE_TAP);
+
+                    if (mCore.isTemporaryHidden_UI(mPackageName)) {
+                        return  true;
+                    }
 
                     // update the position of the window
                     if (event.getPointerCount() == 1) {
