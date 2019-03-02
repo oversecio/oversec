@@ -25,6 +25,7 @@ import android.widget.TextView;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import io.oversec.one.BuildConfig;
 import io.oversec.one.Core;
 import io.oversec.one.common.CoreContract;
 import io.oversec.one.crypto.AbstractEncryptionParams;
@@ -283,6 +284,8 @@ public class GpgEncryptionParamsFragment extends AbstractEncryptionParamsFragmen
             }
 
             mBtnInstallPlay.setVisibility(OpenKeychainConnector.Companion.getInstance(getActivity()).isGooglePlayInstalled() ? View.VISIBLE : View.GONE);
+
+            mBtnInstallFdroid.setVisibility(BuildConfig.IS_FRDOID?View.VISIBLE:View.GONE);
 
             if (mBtnInstallPlay.getVisibility() == View.VISIBLE) {
                 mBtnInstallPlay.setOnClickListener(new View.OnClickListener() {

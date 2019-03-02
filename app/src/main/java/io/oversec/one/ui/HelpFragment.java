@@ -218,6 +218,9 @@ public class HelpFragment extends Fragment implements WithHelp, AppsReceiver.IAp
         mVgOkc = (ViewGroup) v.findViewById(R.id.settings_okc);
         mTvOkcStatus = (TextView) v.findViewById(R.id.okc_status);
         Button btInstallOkcFdroid = (Button) v.findViewById(R.id.btn_okc_fdroid);
+
+        btInstallOkcFdroid.setVisibility(BuildConfig.IS_FRDOID?View.VISIBLE:View.GONE);
+
         btInstallOkcFdroid.setOnClickListener(new OnClickListener() {
 
             @Override
