@@ -1,3 +1,7 @@
+### 1.5.14
+- fixed some crashes (race conditions)
+- buttons can not be dragged anymore when hidden
+
 ### 1.5.13
 - fixed a spurious crash when importing keys
 
