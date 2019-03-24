@@ -16,6 +16,7 @@ public class SecretCodeReceiver extends BroadcastReceiver {
     public void onReceive(Context context, Intent intent) {
         if (intent.getAction().equals("android.provider.Telephony.SECRET_CODE")) {
             String uri = intent.getDataString();
+            if (uri==null) return; //should never happen but aparently does happen :-(
             String[] sep = uri.split("://");
             String code = sep[1];
             if (MainPreferences.INSTANCE.getLauncherSecretDialerCode(context).equals(code)) {
