@@ -15,6 +15,7 @@ import io.oversec.one.crypto.gpg.GpgCryptoHandler;
 import io.oversec.one.crypto.proto.Outer;
 import io.oversec.one.iab.Base64;
 import io.oversec.one.iab.Base64DecoderException;
+import io.oversec.one.ovl.OverlayDecryptView;
 import roboguice.util.Ln;
 
 import java.util.ArrayList;
@@ -508,6 +509,8 @@ public class Tree {
             mFocused = node.isFocused();
             node.getBoundsInScreen(mBoundsInScreen);
             node.getBoundsInParent(mBoundsInParent);
+
+            mBoundsInScreen.offset(0, -OverlayDecryptView.SCREEN_OFFSET_Y);
 
 
             mText = AccessibilityNodeInfoUtils.getNodeText(node);
