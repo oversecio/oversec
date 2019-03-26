@@ -21,6 +21,7 @@ import io.oversec.one.db.IDecryptOverlayLayoutParamsChangedListener;
 
 public class OverlayDecryptView extends OverlayView implements
         IDecryptOverlayLayoutParamsChangedListener {
+    public static int SCREEN_OFFSET_Y;
 
     public static final int TEXT_SIZE_BASE = 6;
     private final int mDrawablePadding;
@@ -94,6 +95,8 @@ public class OverlayDecryptView extends OverlayView implements
         }
     }
 
+    private int[] locW = new int[2];
+    private int[] locS = new int[2];
     public NodeTextView refresh(Tree.TreeNode displayRoot) {
         if (isHidden()) {
             removeAllViews();
@@ -105,6 +108,12 @@ public class OverlayDecryptView extends OverlayView implements
             }
             return null;
         }
+
+        //Determine strange screen offset experienced on Pie / Pixel devices
+        getLocationInWindow(locW);
+        getLocationOnScreen(locS);
+        SCREEN_OFFSET_Y = locS[1] - locW[1];
+
 
         if (mRootNodeView == null) {
 
