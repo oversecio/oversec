@@ -1,4 +1,8 @@
 ### 1.5.14
+- fixed some more crashes 
+- corrected vertical mis-alignment on some devices
+
+### 1.5.14
 - fixed some crashes (race conditions)
 - buttons can not be dragged anymore when hidden
 
